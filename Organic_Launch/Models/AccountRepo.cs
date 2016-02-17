@@ -39,18 +39,10 @@ namespace WebApplication1.Models
 
         public void RemoveAccount(int id)
         {
-            try
-            {
-                FarmSaleDBEntities1 db = new FarmSaleDBEntities1();
-                Account account = db.Accounts.Where(a => a.accountID == id).FirstOrDefault();
-                db.Accounts.Remove(account);
-                db.SaveChanges();
-            }
-            catch(Exception e)
-            {
-                var error = e.Message;
-            }
-           
+            FarmSaleDBEntities1 db = new FarmSaleDBEntities1();
+            Account account = db.Accounts.Where(a => a.accountID == id).FirstOrDefault();
+            db.Accounts.Remove(account);
+            db.SaveChanges();
         }
 
         public void UpdateAccount(int id, string email)
