@@ -27,6 +27,12 @@ namespace Organic_Launch.Controllers
             return View(farms.GetAllFarms());
         }
 
+        [Authorize(Roles = "Admin, Farm")]
+        public ActionResult Details(int id)
+        {
+            return View(farms.GetFarm(id));
+        }
+
         //Needs styling
         [Authorize(Roles = "Farm")]
         public ActionResult Create()
