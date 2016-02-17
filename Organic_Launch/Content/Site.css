@@ -27,12 +27,13 @@ textarea {
     }
 
     #landing_page header {
-        background-image: url('Images/farm.jpg');
+        background-image: url('Images/farm.png');
         background-repeat: no-repeat;
         background-size: cover;
         height:357px;
     }
 
     #landing_page .header_container{
-
+        color:#fff;
+        padding:67px 20px;
     }
