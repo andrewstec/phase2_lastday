@@ -12,7 +12,7 @@ namespace WebApplication1.ViewModels
         [Required]
         [Display(Name = "User Type")]
         public string UserRole { get; set; }
-         
+
         [Required]
         [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$",
         ErrorMessage = "This is not a valid email address.")]

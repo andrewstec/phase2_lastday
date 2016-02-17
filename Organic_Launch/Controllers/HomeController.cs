@@ -319,13 +319,13 @@ namespace WebApplication1.Controllers
                 //    farmAccountRepo.InitializeFarmAccount(newUser.UserName);
 
                 //}
-                //if (newUser.UserRole.Equals("Buyer") || newUser.UserRole.Equals("Farm") )
-                //{
-                //    //Taking the username on the account successful creation and applying it to the
-                //    //Farm database to create a Farm table with that username under the 'farmName' field.
-                //    AccountRepo accountRepo = new AccountRepo();
-                //    accountRepo.InitializeUserAccount(newUser);
-                //}
+                if (newUser.UserRole.Equals("Buyer") || newUser.UserRole.Equals("Farm"))
+                {
+                    //Taking the username on the account successful creation and applying it to the
+                    //Farm database to create a Farm table with that username under the 'farmName' field.
+                    AccountRepo accountRepo = new AccountRepo();
+                    accountRepo.InitializeUserAccount(newUser);
+                }
 
                 var authenticationManager
                                   = HttpContext.Request.GetOwinContext().Authentication;
@@ -339,7 +339,7 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [Authorize(Roles="Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult SecureArea()
         {
             return View();
@@ -352,7 +352,7 @@ namespace WebApplication1.Controllers
             authenticationManager.SignOut();
             return RedirectToAction("Index", "Home");
         }
-        
+
     }
 }
 

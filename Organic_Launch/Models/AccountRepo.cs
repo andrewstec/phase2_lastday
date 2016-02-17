@@ -66,22 +66,58 @@ namespace WebApplication1.Models
             };
 
             db.Accounts.Add(account);
+
+            Address address = new Address()
+            {
+                city = newUser.City,
+                province = newUser.Province,
+                streetName = newUser.StreetName,
+                streetNum = newUser.StreetNum,
+                zip = newUser.PostalCode
+            };
+
+            db.Addresses.Add(address);
+
+            Farm farm = new Farm();
+            if (newUser.UserRole.Equals("Farm"))
+            {
+                farm.farmName = newUser.FarmName;
+                farm.farmProfile = newUser.FarmProfile;
+                db.Farms.Add(farm);
+            }
             db.SaveChanges();
 
-            Account newUserAccount = db.Accounts.Where( u => u.username ==  newUser.UserName ).FirstOrDefault();
+            Account newUserAccount = db.Accounts.Where(u => u.username == newUser.UserName).FirstOrDefault();
+
+
+            int accountID = newUserAccount.accountID;
+
+            //querying new Address and Farm entities that we just added into sepearte tables.
+            Address addressQuery = db.Addresses.Where(a => a.streetNum == newUser.StreetNum && a.streetName == newUser.StreetName && a.zip == newUser.PostalCode).FirstOrDefault();
+            Farm farmQuery = db.Farms.Where(f => f.farmName == newUser.FarmName && f.farmProfile == newUser.FarmProfile).FirstOrDefault();
+
+            //merging Address and Farm entities under the Account through the AccountDetails table
             AccountDetail newUserAccountDetail = new AccountDetail();
-            int id = newUserAccount.accountID;
+            int addressID = addressQuery.addressID;
 
-            Address address = db.Addresses.Where(a => a.addressID == 1).FirstOrDefault();
-            address.city = "Vancouver";
-            address.province = "BC";
+            if (farmQuery != null)
+            {
 
-            Farm farm = db.Farms.Where(f => f.farmID == 1).FirstOrDefault();
-            farm.farmName = newUser.UserName = "Farm";
-            farm.farmProfile = newUser.UserName = "FarmProfile";
+                int farmID = farmQuery.farmID;
+                newUserAccountDetail.farmID = farmID;
+            }
 
-            address.AccountDetails.Add(newUserAccountDetail);
+            newUserAccountDetail.accountID = accountID;
+            newUserAccountDetail.addressID = addressID;
+
+            db.AccountDetails.Add(newUserAccountDetail);
             db.SaveChanges();
+
+            //farm.farmName = newUser.UserName = newUser.FarmName;
+            //farm.farmProfile = newUser.UserName = newUser.FarmProfile;
+
+            //address.AccountDetails.Add(newUserAccountDetail);
+            //db.SaveChanges();
 
             //account.AccountDetails.Add(newUserAccountDetails);
             //Address newUserAddress = new Address();
@@ -91,7 +127,7 @@ namespace WebApplication1.Models
             //newUserAddress.AccountDetails.Add(newUserAccountDetails);
             //farm.AccountDetails.Add(newUserAccountDetails);
             db.SaveChanges();
-            
+
 
             //if ( newUser.UserRole.Equals("Farm"))
             //{
