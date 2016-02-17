@@ -35,7 +35,7 @@
                         {
                             <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
-                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer")</li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name},null)</li>
                             <li>@Html.ActionLink("View Cart", "ViewCart", "Cart")</li>
                             <li>@Html.ActionLink("Shop", "Shop", "Cart")</li>
                         }
