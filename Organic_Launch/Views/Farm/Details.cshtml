@@ -1,0 +1,31 @@
+﻿@model Organic_Launch.Farm
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Farm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.farmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.farmProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmProfile)
+        </dd>
+
+    </dl>
+</div>
+

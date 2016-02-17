@@ -29,6 +29,13 @@ namespace Organic_Launch.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Buyer")]
+        public ActionResult MyAccount()
+        {
+
+            return View();
+        }
+
         [Authorize(Roles = "Admin, Farm")]
         public ActionResult Edit()
         {

@@ -25,6 +25,13 @@ namespace Organic_Launch.Controllers
             return View(accounts.GetAllAccounts());
         }
 
+        public ActionResult ListFarmAccounts()
+        {
+            FarmRepo farms = new FarmRepo();
+            var listOfFarms = farms.GetAllFarms();
+            return View(listOfFarms);
+        }
+
         //Have to delete all child tables that have the userID tied to it first.
         //NEED TO FIX THE REMOVE ACCOUNT FUNCTION IN ACCOUNT REPO
         public ActionResult DeleteAccount(int id)

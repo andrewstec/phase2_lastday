@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Organic_Launch.Farm>
+
+@{
+    ViewBag.Title = "ListFarmAccounts";
+}
+
+<h2>ListFarmAccounts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.farmName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.farmProfile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.farmName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.farmProfile)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", "Farm", new { id=item.farmID }, null) |
+            @Html.ActionLink("Delete", "Delete", "Farm", new { id=item.farmID })
+        </td>
+    </tr>
+}
+
+</table>

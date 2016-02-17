@@ -28,8 +28,8 @@
                             <li></li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") </li>
                             <li>@Html.ActionLink("View Cart", "ViewCart", "Cart")</li>
-                            <li>@Html.ActionLink("Buyer Accounts", "BuyerAccountsList", "Admin")</li>
-                            <li>@Html.ActionLink("Farm Accounts", "FarmAccountsList", "Admin")</li>
+                            <li>@Html.ActionLink("Buyer Accounts", "ListAccounts", "Admin")</li>
+                            <li>@Html.ActionLink("Farm Accounts", "ListFarmAccounts", "Admin")</li>
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Buyer"))
                         {
