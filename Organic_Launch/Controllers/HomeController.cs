@@ -44,6 +44,7 @@ namespace WebApplication1.Controllers
 
         void LockoutUntilYear3015(UserManager<IdentityUser> manager, IdentityUser identityUser)
         {
+
             if (identityUser != null)
             {
                 identityUser.LockoutEnabled = true;
@@ -311,14 +312,7 @@ namespace WebApplication1.Controllers
 
             if (result.Succeeded)
             {
-                //if (newUser.UserRole.Equals("Farm"))
-                //{
-                //    //Taking the username on the account successful creation and applying it to the
-                //    //Farm database to create a Farm table with that username under the 'farmName' field.
-                //    FarmRepo farmAccountRepo = new FarmRepo();
-                //    farmAccountRepo.InitializeFarmAccount(newUser.UserName);
 
-                //}
                 if (newUser.UserRole.Equals("Buyer") || newUser.UserRole.Equals("Farm"))
                 {
                     //Taking the username on the account successful creation and applying it to the

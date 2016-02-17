@@ -237,6 +237,7 @@
     <Content Include="Content\Images\buyer_area.jpg" />
     <Content Include="Content\Images\farm_area.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\welcome.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\107.jpg" />
