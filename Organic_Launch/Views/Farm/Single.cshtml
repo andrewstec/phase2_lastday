@@ -1,0 +1,34 @@
+﻿@model Organic_Launch.Farm
+
+@{
+    ViewBag.Title = "Single";
+}
+
+<h2>Single</h2>
+
+<div>
+    <h4>Farm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.farmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.farmProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmProfile)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.farmID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FarmSaleShoppingCartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CartProduct">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="int" Nullable="false" />
+          <Property Name="productName" Type="varchar" MaxLength="30" />
+          <Property Name="price" Type="money" />
+        </EntityType>
+        <EntityType Name="ProductVisit">
+          <Key>
+            <PropertyRef Name="sessionID" />
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="sessionID" Type="varchar" MaxLength="44" Nullable="false" />
+          <Property Name="productID" Type="int" Nullable="false" />
+          <Property Name="qtyOrdered" Type="int" />
+          <Property Name="updated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Visit">
+          <Key>
+            <PropertyRef Name="sessionID" />
+          </Key>
+          <Property Name="sessionID" Type="varchar" MaxLength="44" Nullable="false" />
+          <Property Name="started" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__ProductVi__produ__60A75C0F">
+          <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="1" />
+          <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CartProduct">
+              <PropertyRef Name="productID" />
+            </Principal>
+            <Dependent Role="ProductVisit">
+              <PropertyRef Name="productID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductVi__sessi__5FB337D6">
+          <End Role="Visit" Type="Self.Visit" Multiplicity="1" />
+          <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visit">
+              <PropertyRef Name="sessionID" />
+            </Principal>
+            <Dependent Role="ProductVisit">
+              <PropertyRef Name="sessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FarmSaleShoppingCartModelStoreContainer">
+          <EntitySet Name="CartProduct" EntityType="Self.CartProduct" Schema="usermanager" store:Type="Tables" />
+          <EntitySet Name="ProductVisit" EntityType="Self.ProductVisit" Schema="usermanager" store:Type="Tables" />
+          <EntitySet Name="Visit" EntityType="Self.Visit" Schema="usermanager" store:Type="Tables" />
+          <AssociationSet Name="FK__ProductVi__produ__60A75C0F" Association="Self.FK__ProductVi__produ__60A75C0F">
+            <End Role="CartProduct" EntitySet="CartProduct" />
+            <End Role="ProductVisit" EntitySet="ProductVisit" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductVi__sessi__5FB337D6" Association="Self.FK__ProductVi__sessi__5FB337D6">
+            <End Role="Visit" EntitySet="Visit" />
+            <End Role="ProductVisit" EntitySet="ProductVisit" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FarmSaleShoppingCartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CartProduct">
+          <Key>
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="productID" Type="Int32" Nullable="false" />
+          <Property Name="productName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="ProductVisits" Relationship="Self.FK__ProductVi__produ__60A75C0F" FromRole="CartProduct" ToRole="ProductVisit" />
+        </EntityType>
+        <EntityType Name="ProductVisit">
+          <Key>
+            <PropertyRef Name="sessionID" />
+            <PropertyRef Name="productID" />
+          </Key>
+          <Property Name="sessionID" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="productID" Type="Int32" Nullable="false" />
+          <Property Name="qtyOrdered" Type="Int32" />
+          <Property Name="updated" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CartProduct" Relationship="Self.FK__ProductVi__produ__60A75C0F" FromRole="ProductVisit" ToRole="CartProduct" />
+          <NavigationProperty Name="Visit" Relationship="Self.FK__ProductVi__sessi__5FB337D6" FromRole="ProductVisit" ToRole="Visit" />
+        </EntityType>
+        <EntityType Name="Visit">
+          <Key>
+            <PropertyRef Name="sessionID" />
+          </Key>
+          <Property Name="sessionID" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="started" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ProductVisits" Relationship="Self.FK__ProductVi__sessi__5FB337D6" FromRole="Visit" ToRole="ProductVisit" />
+        </EntityType>
+        <Association Name="FK__ProductVi__produ__60A75C0F">
+          <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="1" />
+          <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CartProduct">
+              <PropertyRef Name="productID" />
+            </Principal>
+            <Dependent Role="ProductVisit">
+              <PropertyRef Name="productID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProductVi__sessi__5FB337D6">
+          <End Role="Visit" Type="Self.Visit" Multiplicity="1" />
+          <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visit">
+              <PropertyRef Name="sessionID" />
+            </Principal>
+            <Dependent Role="ProductVisit">
+              <PropertyRef Name="sessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ShoppingCartEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CartProducts" EntityType="Self.CartProduct" />
+          <EntitySet Name="ProductVisits" EntityType="Self.ProductVisit" />
+          <EntitySet Name="Visits" EntityType="Self.Visit" />
+          <AssociationSet Name="FK__ProductVi__produ__60A75C0F" Association="Self.FK__ProductVi__produ__60A75C0F">
+            <End Role="CartProduct" EntitySet="CartProducts" />
+            <End Role="ProductVisit" EntitySet="ProductVisits" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProductVi__sessi__5FB337D6" Association="Self.FK__ProductVi__sessi__5FB337D6">
+            <End Role="Visit" EntitySet="Visits" />
+            <End Role="ProductVisit" EntitySet="ProductVisits" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FarmSaleShoppingCartModelStoreContainer" CdmEntityContainer="ShoppingCartEntities">
+          <EntitySetMapping Name="CartProducts">
+            <EntityTypeMapping TypeName="FarmSaleShoppingCartModel.CartProduct">
+              <MappingFragment StoreEntitySet="CartProduct">
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="productName" ColumnName="productName" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductVisits">
+            <EntityTypeMapping TypeName="FarmSaleShoppingCartModel.ProductVisit">
+              <MappingFragment StoreEntitySet="ProductVisit">
+                <ScalarProperty Name="sessionID" ColumnName="sessionID" />
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="qtyOrdered" ColumnName="qtyOrdered" />
+                <ScalarProperty Name="updated" ColumnName="updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visits">
+            <EntityTypeMapping TypeName="FarmSaleShoppingCartModel.Visit">
+              <MappingFragment StoreEntitySet="Visit">
+                <ScalarProperty Name="sessionID" ColumnName="sessionID" />
+                <ScalarProperty Name="started" ColumnName="started" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

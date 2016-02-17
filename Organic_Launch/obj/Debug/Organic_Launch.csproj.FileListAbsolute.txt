@@ -1,0 +1,406 @@
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\ApplicationInsights.config
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\csc.exe
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\vbc.exe
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll.config
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Organic_Launch.pdb
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\EntityFramework.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.Web.Infrastructure.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Razor.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\EntityFramework.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Razor.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.xml
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.dll
+c:\users\a00925502\documents\visual studio 2015\Projects\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.pdb
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.pdb
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\ApplicationInsights.config
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\csc.exe
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\vbc.exe
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll.config
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.pdb
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Agent.Intercept.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.PerfCounterCollector.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Web.Infrastructure.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Owin.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Razor.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Razor.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Newtonsoft.Json.dll
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.xml
+H:\MyCourses\Work\Project\Phase 1\Feb 4\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Newtonsoft.Json.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Newtonsoft.Json.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Owin.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Razor.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\EntityFramework.SqlServer.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.Web.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\Newtonsoft.Json.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Razor.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Helpers.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\bin\System.Web.Mvc.xml
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\A00925502\Documents\GitHub\proto\project-phase1-refactor\Organic_Launch\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.SqlServer.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.Web.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.ApplicationInsights.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Newtonsoft.Json.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Owin.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Helpers.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Mvc.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Razor.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Deployment.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Razor.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.SqlServer.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.Web.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\Newtonsoft.Json.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Razor.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Helpers.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Mvc.xml
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\a00584083\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\EntityFramework.SqlServer.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.Web.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\Newtonsoft.Json.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Razor.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Helpers.xml
+C:\Users\a00840819\Source\Repos\farmsale_phase2\Organic_Launch\bin\System.Web.Mvc.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\EntityFramework.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\EntityFramework.SqlServer.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.Web.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.ApplicationInsights.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Newtonsoft.Json.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Owin.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Helpers.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Mvc.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Razor.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.Deployment.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.Razor.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\EntityFramework.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\EntityFramework.SqlServer.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.Web.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.ApplicationInsights.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\Newtonsoft.Json.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Razor.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.Deployment.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Webpages.Razor.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Helpers.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\bin\System.Web.Mvc.xml
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\A00925502\Source\Repos\farmsale_phase22\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\ApplicationInsights.config
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\csc.exe
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\vbc.exe
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\VBCSCompiler.exe
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\Organic_Launch.dll.config
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\Organic_Launch.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\bin\Organic_Launch.pdb
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\obj\Debug\Organic_Launch.dll
+C:\Users\a00584083\Source\Repos\LASTDAY\Organic_Launch\obj\Debug\Organic_Launch.pdb

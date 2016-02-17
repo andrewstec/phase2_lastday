@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebApplication3.Models.CartItemVM>
+
+@{
+    ViewBag.Title = "MyCart";
+    decimal subtotal = 0;
+    decimal tax = 0.07m;
+    decimal taxAmount = 0;
+    decimal totalCost = 0;
+}
+
+<h2>My Shopping Cart</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Item Total
+        </th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    subtotal += (item.Price * item.Qty);
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CartItemTotal)
+        </td>
+    </tr>
+}
+    @{
+        taxAmount = subtotal * tax;
+        totalCost = subtotal + taxAmount; }
+    <tr>
+        <td class="subtotal" colspan="5" style="text-align:right;">Sub-total: @String.Format("{0:c}", subtotal)</td>
+    </tr>
+    <tr>
+        <td class="subtotal" colspan="5" style="text-align:right;">+7% Tax: @String.Format("{0:c}", taxAmount)</td>
+    </tr>
+    <tr>
+        <td class="subtotal" colspan="5" style="text-align:right;">Total: @String.Format("{0:c}", totalCost)</td>
+    </tr>
+
+</table>
+@Html.ActionLink("Go to Checkout", "Thankyou", "Cart")<br/>
+<a href="#" onclick="showSubtotal()">Save Order</a><br/>
+@Html.ActionLink("Cancel Order", "CancelOrder", "Cart")

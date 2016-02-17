@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebApplication3.Models.CartItemVM>
+
+@{
+    ViewBag.Title = "ViewCart";
+    decimal subtotal = 0;
+    decimal tax = 0.7m;
+    decimal taxAmount = 0;
+    decimal totalCost = 0;
+}
+
+<h2>ViewCart</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CartItemTotal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CartItemTotal)
+        </td>
+    </tr>
+}
+    @{ 
+        taxAmount = subtotal * tax;
+        totalCost = subtotal * tax; }
+    <tr>
+        <td>Sub-total: @Html.Raw(subtotal)</td>
+        <td>+7% Tax: @Html.Raw(taxAmount)</td>
+        <td>Total: @Html.Raw(totalCost)</td>
+    </tr>
+
+</table>
+
+@Html.ActionLink("Go to Checkout", "Thankyou", "Cart")
+@Html.ActionLink("Save Order", "Thankyou", "Cart")
+@Html.ActionLink("Cancel Order", "CancelOrder", "Cart")

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Organic_Launch.Product>
+
+@{
+    ViewBag.Title = "List";
+}
+
+
+    <h2>Farmer's Page</h2>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-4">
+            <a href="@Url.Action("Single", "Product", new { id = item.productID})" id="@item.productID">
+                <img src="img/img.jpg" alt="@item.productName" />
+            </a>
+            <ul>
+                <li>@Html.DisplayFor(modelItem => item.productName)</li>
+                <li>@Html.DisplayFor(modelItem => item.price)</li>
+                <li>@Html.DisplayFor(modelItem => item.productCategory)</li>
+                <li>@Html.DisplayFor(modelItem => item.productDescription)</li>
+            </ul>
+            <div>
+                <a href="@Url.Action("Edit", "Farm", new { id = item.productID})" id="@item.productID">Edit</a>
+                <a href="@Url.Action("Delete", "Farm")" id="@item.productID">Delete</a>
+            </div>
+        </div>
+    }
+
+
+
+

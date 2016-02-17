@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Organic_Launch.Account>
+
+@{
+    ViewBag.Title = "ListAccounts";
+}
+
+<h2>ListAccounts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accountType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accountType)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteAccount", new { id=item.accountID })
+        </td>
+    </tr>
+}
+
+</table>

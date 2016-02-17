@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Organic_Launch.CartProduct>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Shop Inventory</h2>
+
+<table class="table table-bordered">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Add to Cart", "Add", "Cart", new { id = item.productID }, null)
+        </td>
+        <td>
+            #@Html.DisplayFor(modelItem => item.productID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.productName)
+        </td>
+        <td>
+            <img height="250" width="250" style="margin:0 auto;" class="img-responsive" src="~/Images/@(item.productID).jpg" />
+        </td>
+        <td>
+            $@Html.DisplayFor(modelItem => item.price)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FarmSaleDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="accountType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AccountDetail">
+    <Key>
+      <PropertyRef Name="accountDetailID" />
+    </Key>
+    <Property Name="accountDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountID" Type="int" />
+    <Property Name="farmID" Type="int" />
+    <Property Name="addressID" Type="int" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="addressID" />
+    </Key>
+    <Property Name="addressID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="streetNum" Type="varchar" MaxLength="50" />
+    <Property Name="streetName" Type="varchar" MaxLength="50" />
+    <Property Name="province" Type="varchar" MaxLength="50" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="zip" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Farm">
+    <Key>
+      <PropertyRef Name="farmID" />
+    </Key>
+    <Property Name="farmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="farmName" Type="varchar" MaxLength="50" />
+    <Property Name="farmProfile" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FarmProduct">
+    <Key>
+      <PropertyRef Name="farmProductID" />
+    </Key>
+    <Property Name="farmProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="qty" Type="int" />
+    <Property Name="farmID" Type="int" />
+    <Property Name="productID" Type="int" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="accountID" Type="int" />
+    <Property Name="farmProductID" Type="int" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productName" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="productCategory" Type="varchar" MaxLength="50" />
+    <Property Name="productDescription" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FKAccount1">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="AccountDetail" Type="Self.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAccount2">
+    <End Role="Farm" Type="Self.Farm" Multiplicity="0..1" />
+    <End Role="AccountDetail" Type="Self.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Farm">
+        <PropertyRef Name="farmID" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="farmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKAccountDet1">
+    <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+    <End Role="AccountDetail" Type="Self.AccountDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="addressID" />
+      </Principal>
+      <Dependent Role="AccountDetail">
+        <PropertyRef Name="addressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFarmProduct1">
+    <End Role="Farm" Type="Self.Farm" Multiplicity="0..1" />
+    <End Role="FarmProduct" Type="Self.FarmProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Farm">
+        <PropertyRef Name="farmID" />
+      </Principal>
+      <Dependent Role="FarmProduct">
+        <PropertyRef Name="farmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKFarmProduct2">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="FarmProduct" Type="Self.FarmProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="FarmProduct">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKOrder1">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKOrder2">
+    <End Role="FarmProduct" Type="Self.FarmProduct" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FarmProduct">
+        <PropertyRef Name="farmProductID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="farmProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FarmSaleDBModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="AccountDetail" EntityType="Self.AccountDetail" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="Address" EntityType="Self.Address" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="Farm" EntityType="Self.Farm" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="FarmProduct" EntityType="Self.FarmProduct" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="usermanager" store:Type="Tables" />
+    <AssociationSet Name="FKAccount1" Association="Self.FKAccount1">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FKAccount2" Association="Self.FKAccount2">
+      <End Role="Farm" EntitySet="Farm" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FKAccountDet1" Association="Self.FKAccountDet1">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="AccountDetail" EntitySet="AccountDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FKFarmProduct1" Association="Self.FKFarmProduct1">
+      <End Role="Farm" EntitySet="Farm" />
+      <End Role="FarmProduct" EntitySet="FarmProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FKFarmProduct2" Association="Self.FKFarmProduct2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="FarmProduct" EntitySet="FarmProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FKOrder1" Association="Self.FKOrder1">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FKOrder2" Association="Self.FKOrder2">
+      <End Role="FarmProduct" EntitySet="FarmProduct" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

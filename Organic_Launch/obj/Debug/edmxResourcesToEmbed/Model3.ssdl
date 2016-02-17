@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FarmSaleShoppingCartModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CartProduct">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="productName" Type="varchar" MaxLength="30" />
+    <Property Name="price" Type="money" />
+  </EntityType>
+  <EntityType Name="ProductVisit">
+    <Key>
+      <PropertyRef Name="sessionID" />
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="sessionID" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="qtyOrdered" Type="int" />
+    <Property Name="updated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Visit">
+    <Key>
+      <PropertyRef Name="sessionID" />
+    </Key>
+    <Property Name="sessionID" Type="varchar" MaxLength="44" Nullable="false" />
+    <Property Name="started" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__ProductVi__produ__60A75C0F">
+    <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="1" />
+    <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CartProduct">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="ProductVisit">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductVi__sessi__5FB337D6">
+    <End Role="Visit" Type="Self.Visit" Multiplicity="1" />
+    <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visit">
+        <PropertyRef Name="sessionID" />
+      </Principal>
+      <Dependent Role="ProductVisit">
+        <PropertyRef Name="sessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FarmSaleShoppingCartModelStoreContainer">
+    <EntitySet Name="CartProduct" EntityType="Self.CartProduct" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="ProductVisit" EntityType="Self.ProductVisit" Schema="usermanager" store:Type="Tables" />
+    <EntitySet Name="Visit" EntityType="Self.Visit" Schema="usermanager" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductVi__produ__60A75C0F" Association="Self.FK__ProductVi__produ__60A75C0F">
+      <End Role="CartProduct" EntitySet="CartProduct" />
+      <End Role="ProductVisit" EntitySet="ProductVisit" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductVi__sessi__5FB337D6" Association="Self.FK__ProductVi__sessi__5FB337D6">
+      <End Role="Visit" EntitySet="Visit" />
+      <End Role="ProductVisit" EntitySet="ProductVisit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

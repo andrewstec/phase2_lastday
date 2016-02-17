@@ -1,0 +1,43 @@
+﻿@model Organic_Launch.CartProduct
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add Item to Cart</h2>
+
+<h3 style="color:red;">@Html.Raw(ViewBag.Error)</h3>
+<div>
+    @using (Html.BeginForm("ViewCart", "Cart"))
+    {
+    <table class="table table-bordered">
+        <tr>
+            <td>
+                #@Html.DisplayFor(model => model.productID)
+            </td>
+
+            <td>
+                @Html.DisplayFor(model => model.productName)
+            </td>
+
+            <td>
+                <img height="100" width="100" style="margin:0 auto;" class="img-responsive" src="~/Images/@(Model.productID).jpg" />
+            </td>
+
+            <td>
+                $@Html.DisplayFor(model => model.price)
+            </td>
+            <td>
+                <strong>Qty: </strong><input name="qty" type="number" value="@ViewBag.Qty" min="0" onkeydown="return false"/> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Update" /> | 
+                @Html.ActionLink("Cancel", "Index")
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="productId" value="@Model.productID" />
+    }
+</div>

@@ -1,0 +1,41 @@
+﻿@model Organic_Launch.Farm
+
+@{
+    ViewBag.Title = "Delete";
+    var farmID = @Html.DisplayFor(model => model.farmID);
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Farm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.farmName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.farmProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.farmProfile)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete", "Farm")) {
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Html.DisplayFor(model => model.farmID)" />
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

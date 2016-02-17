@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FarmSaleShoppingCartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CartProduct">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="Int32" Nullable="false" />
+    <Property Name="productName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="ProductVisits" Relationship="Self.FK__ProductVi__produ__60A75C0F" FromRole="CartProduct" ToRole="ProductVisit" />
+  </EntityType>
+  <EntityType Name="ProductVisit">
+    <Key>
+      <PropertyRef Name="sessionID" />
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="sessionID" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="productID" Type="Int32" Nullable="false" />
+    <Property Name="qtyOrdered" Type="Int32" />
+    <Property Name="updated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CartProduct" Relationship="Self.FK__ProductVi__produ__60A75C0F" FromRole="ProductVisit" ToRole="CartProduct" />
+    <NavigationProperty Name="Visit" Relationship="Self.FK__ProductVi__sessi__5FB337D6" FromRole="ProductVisit" ToRole="Visit" />
+  </EntityType>
+  <EntityType Name="Visit">
+    <Key>
+      <PropertyRef Name="sessionID" />
+    </Key>
+    <Property Name="sessionID" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="started" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProductVisits" Relationship="Self.FK__ProductVi__sessi__5FB337D6" FromRole="Visit" ToRole="ProductVisit" />
+  </EntityType>
+  <Association Name="FK__ProductVi__produ__60A75C0F">
+    <End Role="CartProduct" Type="Self.CartProduct" Multiplicity="1" />
+    <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CartProduct">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="ProductVisit">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductVi__sessi__5FB337D6">
+    <End Role="Visit" Type="Self.Visit" Multiplicity="1" />
+    <End Role="ProductVisit" Type="Self.ProductVisit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visit">
+        <PropertyRef Name="sessionID" />
+      </Principal>
+      <Dependent Role="ProductVisit">
+        <PropertyRef Name="sessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShoppingCartEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CartProducts" EntityType="Self.CartProduct" />
+    <EntitySet Name="ProductVisits" EntityType="Self.ProductVisit" />
+    <EntitySet Name="Visits" EntityType="Self.Visit" />
+    <AssociationSet Name="FK__ProductVi__produ__60A75C0F" Association="Self.FK__ProductVi__produ__60A75C0F">
+      <End Role="CartProduct" EntitySet="CartProducts" />
+      <End Role="ProductVisit" EntitySet="ProductVisits" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductVi__sessi__5FB337D6" Association="Self.FK__ProductVi__sessi__5FB337D6">
+      <End Role="Visit" EntitySet="Visits" />
+      <End Role="ProductVisit" EntitySet="ProductVisits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

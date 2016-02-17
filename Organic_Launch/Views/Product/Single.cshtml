@@ -1,0 +1,31 @@
+﻿@model Organic_Launch.Product
+
+@{
+    ViewBag.Title = "Single";
+}
+
+<h2>Single</h2>
+
+<section>
+    <h4>Product</h4>
+    <hr />
+    <div class="col-sm-6">
+        <img src="" alt="@Model.productName" />
+    </div>
+
+    <div class="col-sm-6">
+            <p>
+                @Html.DisplayFor(model => model.productName)
+            </p>
+            <p>
+                @Html.DisplayFor(model => model.price)
+            </p>
+            <p>
+                @Html.DisplayFor(model => model.productCategory)
+            </p>
+            <p>
+                @Html.DisplayFor(model => model.productDescription)
+            </p>
+    </div>
+    
+</section>

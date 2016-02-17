@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FarmSaleDBModelStoreContainer" CdmEntityContainer="FarmSaleDBEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="accountType" ColumnName="accountType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccountDetails">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.AccountDetail">
+        <MappingFragment StoreEntitySet="AccountDetail">
+          <ScalarProperty Name="accountDetailID" ColumnName="accountDetailID" />
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="farmID" ColumnName="farmID" />
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="addressID" ColumnName="addressID" />
+          <ScalarProperty Name="streetNum" ColumnName="streetNum" />
+          <ScalarProperty Name="streetName" ColumnName="streetName" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Farms">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Farm">
+        <MappingFragment StoreEntitySet="Farm">
+          <ScalarProperty Name="farmID" ColumnName="farmID" />
+          <ScalarProperty Name="farmName" ColumnName="farmName" />
+          <ScalarProperty Name="farmProfile" ColumnName="farmProfile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FarmProducts">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.FarmProduct">
+        <MappingFragment StoreEntitySet="FarmProduct">
+          <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="farmID" ColumnName="farmID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="productCategory" ColumnName="productCategory" />
+          <ScalarProperty Name="productDescription" ColumnName="productDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
