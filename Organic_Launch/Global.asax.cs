@@ -54,12 +54,12 @@ namespace Organic_Launch
 
         protected void Session_End(object sender, EventArgs e)
         {
-            //if (HttpContext.Current.Session.SessionID != null)
-            //{
-            //    HttpContext.Current.Session.Clear();
-            //    HttpContext.Current.Session.Abandon();
+            if (HttpContext.Current.Session.SessionID != null)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
 
-            //}
+            }
         }
     }
 }
