@@ -234,9 +234,16 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\admin_area.jpg" />
+    <Content Include="Content\Images\animal-countryside-agriculture-farm.jpg" />
     <Content Include="Content\Images\buyer_area.jpg" />
+    <Content Include="Content\Images\chickens-866507_640.jpg" />
+    <Content Include="Content\Images\farm.jpg" />
+    <Content Include="Content\Images\farm.png" />
     <Content Include="Content\Images\farm_area.jpg" />
+    <Content Include="Content\Images\food-sunset-love-field.jpg" />
+    <Content Include="Content\Images\fruit-993904_640.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\welcome.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\107.jpg" />
@@ -345,6 +352,7 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Home\toggle-farm-stylesheet.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -503,6 +511,9 @@
     </None>
     <Content Include="scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Buyer\MyAccount.cshtml" />
+    <Content Include="Views\Admin\ListFarmAccounts.cshtml" />
+    <Content Include="Views\Farm\Details.cshtml" />
     <None Include="Views\Home\Register.cshtmlold2" />
     <Content Include="Views\Home\SecureArea.cshtml" />
     <Content Include="Views\Home\ConfirmEmail.cshtml" />

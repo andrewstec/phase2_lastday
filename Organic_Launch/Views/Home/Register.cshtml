@@ -4,13 +4,18 @@
     ViewBag.Title = "Register";
 }
 
+<style>
+
+    .hidden {
+    display: none;
+}
+</style>
+
 <h2>Register</h2>
 
 
 @using (Html.BeginForm())
 {
-
-
         
             List<SelectListItem> listItems = new List<SelectListItem>();
             listItems.Add(new SelectListItem
@@ -43,7 +48,7 @@
                 @Html.LabelFor(model => model.UserRole, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
 
-                    @Html.DropDownListFor(model => model.UserRole, listItems, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DropDownListFor(model => model.UserRole, listItems, htmlAttributes: new { @class = "form-control", @id = "farm-control" } )
                     @Html.ValidationMessageFor(model => model.UserRole, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -112,21 +117,24 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.FarmName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.FarmName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.FarmName, "", new { @class = "text-danger" })
+            <div id="toggle-farm">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FarmName, htmlAttributes: new { @class = "control-label col-md-2 " })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FarmName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FarmName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FarmProfile, htmlAttributes: new { @class = "control-label col-md-2 " })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FarmProfile, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FarmProfile, "", new { @class = "text-danger" })
+                    </div>
                 </div>
             </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.FarmProfile, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.FarmProfile, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.FarmProfile, "", new { @class = "text-danger" })
-                </div>
-            </div>
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
@@ -143,3 +151,23 @@
         <script src="~/Scripts/jquery-1.10.2.min.js"></script>
         <script src="~/Scripts/jquery.validate.min.js"></script>
         <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+
+    window.onload = function () {
+
+        var toggle = document.getElementById("farm-control");
+
+        toggle.onchange = function () {
+
+            if (toggle.options[toggle.selectedIndex].value != "Farm") {
+                document.getElementById("toggle-farm").className = "hidden";
+            }
+            else {
+                document.getElementById("toggle-farm").className = "";
+            }
+        }
+
+
+    }
+
+</script>

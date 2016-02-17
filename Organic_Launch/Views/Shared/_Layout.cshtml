@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Views/Home/toggle-farm-stylesheet.css" rel="stylesheet" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
@@ -27,25 +28,23 @@
                         {
                             <li></li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") </li>
-                            <li>@Html.ActionLink("View Cart", "ViewCart", "Cart")</li>
-                            <li>@Html.ActionLink("Buyer Accounts", "BuyerAccountsList", "Admin")</li>
-                            <li>@Html.ActionLink("Farm Accounts", "FarmAccountsList", "Admin")</li>
+                            <li>@Html.ActionLink("Buyer Accounts", "ListAccounts", "Admin")</li>
+                            <li>@Html.ActionLink("Farm Accounts", "ListFarmAccounts", "Admin")</li>
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Buyer"))
                         {
                             <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
-                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer")</li>
-                            <li>@Html.ActionLink("View Cart", "ViewCart", "Cart")</li>
-                            <li>@Html.ActionLink("Shop", "Shop", "Cart")</li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name},null)</li>
+                            <li>@Html.ActionLink("View Cart", "MyCart", "Cart")</li>
+                            <li>@Html.ActionLink("Shop", "Index", "Cart")</li>
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Farm"))
                         {
                             <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
-                            <li>@Html.ActionLink("View Cart", "ViewCart", "Cart")</li>
-                            <li>@Html.ActionLink("Farm Profile", "EditFarm", "Farm")</li>
-                            <li>@Html.ActionLink("Inventory Management", "InventoryManagement", "Farm")</li>
+                            <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name}, null)</li>
+                            <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
                         }
                         else
                         {

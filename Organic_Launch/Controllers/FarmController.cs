@@ -27,6 +27,12 @@ namespace Organic_Launch.Controllers
             return View(farms.GetAllFarms());
         }
 
+        [Authorize(Roles = "Admin, Farm")]
+        public ActionResult Details(int id)
+        {
+            return View(farms.GetFarm(id));
+        }
+
         //Needs styling
         [Authorize(Roles = "Farm")]
         public ActionResult Create()
@@ -43,16 +49,23 @@ namespace Organic_Launch.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Farm")]
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string name)
         {
-            return View(farms.GetFarm(id));
+            Account account = db.Accounts.Where(a => a.username == name).FirstOrDefault();
+            AccountDetail details = db.AccountDetails.Where(d => d.accountID == account.accountID).FirstOrDefault();
+            Farm farm = db.Farms.Where(f => f.farmID == details.farmID).FirstOrDefault();
+            return View(farm);
         }
 
         [Authorize(Roles = "Farm")]
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(int farmID, string farmName, string farmProfile)
         {
-            return View();
+            Farm farm = db.Farms.Where(f => f.farmID == farmID).FirstOrDefault();
+            farm.farmName = farmName;
+            farm.farmProfile = farmProfile;
+            db.SaveChanges();
+            return View(farm);
         }
 
         //Needs styling, Need to add the POST FUNCTION FOR THIS
@@ -72,6 +85,15 @@ namespace Organic_Launch.Controllers
         public ActionResult Single(int id)
         {
             return View(farms.GetFarm(id));
+        }
+
+        [HttpGet]
+        public ActionResult ViewInventory(string name)
+        {
+            Account account = db.Accounts.Where(a => a.username == name).FirstOrDefault();
+            AccountDetail details = db.AccountDetails.Where(d => d.accountID == account.accountID).FirstOrDefault();
+            Farm farm = db.Farms.Where(f => f.farmID == details.farmID).FirstOrDefault();
+            return View(ProductRepo.GetMyProducts(farm.farmID));
         }
     }
 }

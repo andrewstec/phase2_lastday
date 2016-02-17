@@ -16,3 +16,24 @@ textarea {
     max-width: 280px;
 }
 
+
+/*----------------------- Landing Page Styles*/
+#landing_page {
+    text-align: center;
+}
+
+    #landing_page section {
+        padding: 100px 50px;
+    }
+
+    #landing_page header {
+        background-image: url('Images/farm.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:357px;
+    }
+
+    #landing_page .header_container{
+        color:#fff;
+        padding:67px 20px;
+    }
