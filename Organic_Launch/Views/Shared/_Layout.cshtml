@@ -43,8 +43,8 @@
                         {
                             <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
-                            <li>@Html.ActionLink("Farm Profile", "EditFarm", "Farm")</li>
-                            <li>@Html.ActionLink("Inventory Management", "InventoryManagement", "Farm")</li>
+                            <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name}, null)</li>
+                            <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
                         }
                         else
                         {
