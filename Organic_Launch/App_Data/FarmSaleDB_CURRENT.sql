@@ -1,10 +1,9 @@
-
+IF OBJECT_ID('[Order]', 'U')   
+       IS NOT NULL DROP TABLE [Order];
 IF OBJECT_ID('AccountDetail', 'U')   
        IS NOT NULL DROP TABLE AccountDetail;
 IF OBJECT_ID('FarmProduct', 'U')   
        IS NOT NULL DROP TABLE FarmProduct;
-IF OBJECT_ID('[Order]', 'U')   
-       IS NOT NULL DROP TABLE [Order];
 IF OBJECT_ID('Product', 'U')   
        IS NOT NULL DROP TABLE Product;
 IF OBJECT_ID('Farm', 'U')   
@@ -18,9 +17,8 @@ IF OBJECT_ID('Address', 'U')
 CREATE TABLE Account (
        accountID            INT IDENTITY PRIMARY KEY,
        username             VARCHAR(50),
-       password             VARCHAR(50),
        email                VARCHAR(50),
-       accountType          VARCHAR(50)
+       accountType          VARCHAR(50),
        );
 CREATE TABLE Product (
        productID                  INT IDENTITY PRIMARY KEY,
@@ -68,33 +66,24 @@ ALTER TABLE [Order] ADD CONSTRAINT FKOrder1 FOREIGN KEY (accountID) REFERENCES A
 ALTER TABLE [Order] ADD CONSTRAINT FKOrder2 FOREIGN KEY (farmProductID) REFERENCES FarmProduct (farmProductID);
 ALTER TABLE AccountDetail ADD CONSTRAINT FKAccountDet1 FOREIGN KEY (addressID) REFERENCES Address (addressID);
  
-INSERT INTO Account VALUES('Tin', 'bcitpassword', 'tlau@my.bcit.ca', 'farmer');
+INSERT INTO Account VALUES('Tin', 'tlau@my.bcit.ca', 'farmer');
 INSERT INTO Product VALUES('Lemons', 40.34, 'Fruit', 'Fresh lemons.');
 INSERT INTO Farm VALUES('Partridge Farms', 'Patridge farms was established during the early American pioneer days in the days of Fort Vancouver. We have been producing poultry and lemons ever since.');
 INSERT INTO Address VALUES('1071', 'Harold Road', 'BC', 'Vancouver', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);
  
-INSERT INTO Account VALUES('Slav', 'capilanopassword', 'svislas@my.sfu.ca', 'buyer');
+INSERT INTO Account VALUES('Slav', 'svislas@my.sfu.ca', 'buyer');
 INSERT INTO Product VALUES('Oranges', 1.45, 'Fruit', 'Well-ripened oranges.');
 INSERT INTO Farm VALUES('Orangeville Farms', 'Organville farms takes citrus seriously. Deliscous, well-ripened fruit makes for excellent quality refreshments.');
 INSERT INTO Address VALUES('234', 'Stadium Road', 'BC', 'Vancouver', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);
  
-INSERT INTO Account VALUES('Marrion', 'ubcpassword', 'mlulu@my.ubc.ca', 'buyer');
+INSERT INTO Account VALUES('Marrion', 'mlulu@my.ubc.ca', 'buyer');
 INSERT INTO Product VALUES('Kobe Beef', 34578.34, 'Beef', '1-month aged Kobe beef.');
 INSERT INTO Farm VALUES('Japan Beef Farms', 'The Kobe beef producer of Canada is regarded as the highest quality beef producer in the Pacific Northwest area.');
 INSERT INTO Address VALUES('54664', 'King George Road', 'BC', 'Prince George', 'Canada');
 INSERT INTO FarmProduct VALUES(5, 1, 1);
 INSERT INTO [Order] VALUES(1, 1);
- 
-SELECT * FROM Account;
-SELECT * FROM Product;
-SELECT * FROM Farm;
-SELECT * FROM Address;
-SELECT * FROM FarmProduct;
-SELECT * FROM [Order];
- 
-
  
