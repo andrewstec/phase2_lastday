@@ -292,7 +292,7 @@
           </Key>
           <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="price" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="priceInKg" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="productCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="productDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="qty" Type="Int32" />
@@ -503,7 +503,7 @@
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="productID" ColumnName="productID" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
-                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="priceInKg" ColumnName="price" />
                 <ScalarProperty Name="productCategory" ColumnName="productCategory" />
                 <ScalarProperty Name="productDescription" ColumnName="productDescription" />
                 <ScalarProperty Name="qty" ColumnName="qty" />

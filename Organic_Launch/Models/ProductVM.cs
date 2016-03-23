@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +9,7 @@ namespace WebApplication1.Models
     public class ProductVM
     {
         public string ProductName { get; set; }
+        [DisplayName("Price In Kg")]
         public decimal Price { get; set; }
         public string ProductCategory { get; set; }
         public string Description { get; set; }
