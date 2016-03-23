@@ -33,9 +33,20 @@
                 </div>
             </div>
 
+            @if (ViewBag.errorMsg != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <div class="alert alert-danger">
+                            <strong>Danger!</strong> @ViewBag.errorMsg
+                        </div>
+                    </div>
+                </div>
+            }
+
             <div class="form-group">
                 <div class="col-md-10">
-                    @Html.ActionLink("Forgot your password?", "Index")
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
                 </div>
             </div>
 

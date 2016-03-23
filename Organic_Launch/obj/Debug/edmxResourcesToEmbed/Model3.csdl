@@ -14,12 +14,13 @@
       <PropertyRef Name="sessionID" />
       <PropertyRef Name="productID" />
     </Key>
-    <Property Name="sessionID" Type="String" MaxLength="44" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sessionID" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="productID" Type="Int32" Nullable="false" />
     <Property Name="qtyOrdered" Type="Int32" />
     <Property Name="updated" Type="DateTime" Precision="3" />
     <NavigationProperty Name="CartProduct" Relationship="Self.FK__ProductVi__produ__60A75C0F" FromRole="ProductVisit" ToRole="CartProduct" />
     <NavigationProperty Name="Visit" Relationship="Self.FK__ProductVi__sessi__5FB337D6" FromRole="ProductVisit" ToRole="Visit" />
+    <Property Name="username" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Visit">
     <Key>

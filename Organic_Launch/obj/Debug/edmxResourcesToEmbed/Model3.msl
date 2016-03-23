@@ -13,6 +13,7 @@
     <EntitySetMapping Name="ProductVisits">
       <EntityTypeMapping TypeName="FarmSaleShoppingCartModel.ProductVisit">
         <MappingFragment StoreEntitySet="ProductVisit">
+          <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="sessionID" ColumnName="sessionID" />
           <ScalarProperty Name="productID" ColumnName="productID" />
           <ScalarProperty Name="qtyOrdered" ColumnName="qtyOrdered" />

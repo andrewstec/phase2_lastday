@@ -10,8 +10,10 @@ using System.Net;
 using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Services.Description;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
+using WebApplication3.BusinessLogic;
 
 namespace WebApplication1.Controllers
 {
@@ -122,12 +124,22 @@ namespace WebApplication1.Controllers
             var user = manager.FindByEmail(email);
             CreateTokenProvider(manager, PASSWORD_RESET);
 
-            var code = manager.GeneratePasswordResetToken(user.Id);
-            var callbackUrl = Url.Action("ResetPassword", "Home",
-                                         new { userId = user.Id, code = code },
-                                         protocol: Request.Url.Scheme);
-            ViewBag.FakeEmailMessage = "Please reset your password by clicking <a href=\""
-                                     + callbackUrl + "\">here</a>";
+            if (user != null)
+            {
+                var code = manager.GeneratePasswordResetToken(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Home",
+                                             new { userId = user.Id, code = code },
+                                             protocol: Request.Url.Scheme);
+                string emailMessage = "Email successfully sent. Please check your email to reset your password";
+
+                string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(email, emailMessage));
+
+                ViewBag.FakeEmailMessage = emailMessage;
+
+                return View();
+            }
+           
+            ViewBag.Error = "There wasn't an account for that email";
             return View();
         }
 
@@ -241,7 +253,7 @@ namespace WebApplication1.Controllers
 
             //DisableLockout(manager, identityUser);
             //LockoutUntilYear3015(manager, identityUser);
-
+            System.Threading.Thread.Sleep(1000);
             if (ModelState.IsValid)
             {
                 if ((ValidLogin(login)))
@@ -284,6 +296,7 @@ namespace WebApplication1.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
+            ViewBag.errorMsg = "Invalid Username or Password";
             return View();
         }
         [HttpGet]

@@ -18,6 +18,7 @@ namespace Organic_Launch
         public int productID { get; set; }
         public Nullable<int> qtyOrdered { get; set; }
         public Nullable<System.DateTime> updated { get; set; }
+        public string username { get; set; }
     
         public virtual CartProduct CartProduct { get; set; }
         public virtual Visit Visit { get; set; }

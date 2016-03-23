@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\a00840819\Source\Repos\CartTest\Organic_Launch\Model3.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\Model3.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
