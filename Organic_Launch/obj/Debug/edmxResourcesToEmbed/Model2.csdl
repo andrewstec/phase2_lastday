@@ -84,7 +84,7 @@
     </Key>
     <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="price" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="priceInKg" Type="Decimal" Precision="19" Scale="2" />
     <Property Name="productCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="productDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="qty" Type="Int32" />

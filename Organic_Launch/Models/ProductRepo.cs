@@ -27,7 +27,7 @@ namespace WebApplication1.Models
 
             Product product = new Product();
             product.productName = name;
-            product.price = price;
+            product.priceInKg = price;
             product.productCategory = category;
             product.productDescription = description;
             product.qty = qty;
@@ -51,7 +51,7 @@ namespace WebApplication1.Models
             if (product != null)
             {
                 product.productName = name;
-                product.price = price;
+                product.priceInKg = price;
                 product.productCategory = category;
                 product.productDescription = description;
                 product.qty = qty;
@@ -90,7 +90,7 @@ namespace WebApplication1.Models
                 select new ProductVM()
                 {
                     ProductName = p.productName,
-                    Price = (decimal)p.price,
+                    Price = (decimal)p.priceInKg,
                     ProductCategory = p.productCategory,
                     Description = p.productDescription,
                     Qty = (int)p.qty,

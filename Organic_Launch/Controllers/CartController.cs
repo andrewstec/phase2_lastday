@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using WebApplication3.BusinessLogic;
 using Organic_Launch;
 using WebApplication3.Models;
+using WebApplication1.Models;
 
 namespace Organic_Launch.Controllers
 {
@@ -38,8 +39,18 @@ namespace Organic_Launch.Controllers
             return View(products.getProduct(id));
         }
 
+        public ActionResult AddProduct(int id)
+        {
+            ProductRepo products = new ProductRepo();
+            ShoppingCartEntities db = new ShoppingCartEntities();
+            SessionHelper session = new SessionHelper();
+            var prodVisit = db.ProductVisits.Where(pv => pv.productID == id && pv.sessionID == session.SessionID).FirstOrDefault();
+            ViewBag.Qty = (prodVisit != null) ? prodVisit.qtyOrdered : 1;
+            return View(products.GetProduct(id));
+        }
+
         [HttpPost]
-        public ActionResult ViewCart(int productId, int qty)
+        public ActionResult ViewCart(int productId, int qty, string username)
         {
             if (qty < 1)
             {
@@ -53,7 +64,7 @@ namespace Organic_Launch.Controllers
             string id = session.SessionID;
 
             ProductVisitRepo pvRepo = new ProductVisitRepo();
-            pvRepo.addProductVisit(id, productId, qty, DateTime.Now);
+            pvRepo.addProductVisit(id, productId, qty, DateTime.Now, username);
 
             return RedirectToAction("MyCart", "Cart");
         }
@@ -63,10 +74,10 @@ namespace Organic_Launch.Controllers
             ShoppingCartEntities db = new ShoppingCartEntities();
 
             SessionHelper session = new SessionHelper();
-            string id = session.SessionID;
+            //string id = session.SessionID;
 
             CartItemRepo cir = new CartItemRepo();
-            return View(cir.GetCartItemsBySession(id));
+            return View(cir.GetCartItemsByUser(User.Identity.Name));
         }
 
         public ActionResult CancelOrder()
@@ -81,6 +92,12 @@ namespace Organic_Launch.Controllers
             //visitRepo.removeVisit(id);
 
             return RedirectToAction("Index", "Cart");
+        }
+
+        public ActionResult Products()
+        {
+            ProductRepo products = new ProductRepo();
+            return View(products.GetAllProducts());
         }
     }
 }

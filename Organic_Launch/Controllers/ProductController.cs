@@ -29,7 +29,7 @@ namespace Organic_Launch.Controllers
         {
             Product product = new Product();
             product.productName = productName;
-            product.price = price;
+            product.priceInKg = price;
             product.productCategory = productCategory;
             product.productDescription = productDescription;
             product.qty = qty;

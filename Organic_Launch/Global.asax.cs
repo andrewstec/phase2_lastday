@@ -6,8 +6,6 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Threading;
-using System.Web;
-using System.Web.Helpers;
 using System.Security.Principal;
 using WebApplication3.BusinessLogic;
 using WebApplication3.Models;
@@ -50,6 +48,7 @@ namespace Organic_Launch
             VisitRepo visit = new VisitRepo();
             visit.removeOldVisits(DateTime.Now);
             visit.addVisit(helper.SessionID, helper.Start);
+
         }
 
         protected void Session_End(object sender, EventArgs e)
