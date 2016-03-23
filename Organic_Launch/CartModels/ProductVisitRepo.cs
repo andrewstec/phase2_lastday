@@ -34,7 +34,7 @@ namespace WebApplication3.Models
         }
 
         //Updates a productVisit entry if it already exists. Creates a new one otherwise
-        public void addProductVisit(string sessionId, int productId, int qty, DateTime lastUpdated)
+        public void addProductVisit(string sessionId, int productId, int qty, DateTime lastUpdated,string username)
         {
             ShoppingCartEntities db = new ShoppingCartEntities();
 
@@ -51,6 +51,7 @@ namespace WebApplication3.Models
             ProductVisit pv = new ProductVisit();
             pv.sessionID = sessionId;
             pv.productID = productId;
+            pv.username = username;
             pv.qtyOrdered = qty;
             pv.updated = lastUpdated;
             db.ProductVisits.Add(pv);

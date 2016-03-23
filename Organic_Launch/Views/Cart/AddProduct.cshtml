@@ -1,0 +1,38 @@
+﻿@model Organic_Launch.Product
+
+@{
+    ViewBag.Title = "AddProduct";
+}
+
+<h2>Add Item To Cart</h2>
+
+<div>
+    @using (Html.BeginForm("ViewCart", "Cart"))
+    {
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.productName)
+                </td>
+
+                <td>
+                    $@Html.DisplayFor(model => model.priceInKg) / KG
+                </td>
+
+                <td>
+                    Amount (KG): <input name="qty" type="number" value="@ViewBag.Qty" min="0" onkeydown="return false" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Add to Cart" /> |
+                    @Html.ActionLink("Cancel", "Index")
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="productId" value="@Model.productID" />
+        <input type="hidden" name="username" value="@User.Identity.Name" />
+    }
+</div>
+
