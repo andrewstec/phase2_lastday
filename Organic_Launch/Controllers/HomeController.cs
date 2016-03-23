@@ -14,6 +14,7 @@ using System.Web.Services.Description;
 using WebApplication1.Models;
 using WebApplication1.ViewModels;
 using WebApplication3.BusinessLogic;
+using WebApplication1.BusinessLayer;
 
 namespace WebApplication1.Controllers
 {
@@ -343,6 +344,10 @@ namespace WebApplication1.Controllers
                 string testVariable = newUser.UserRole;
                 AddUserToRole(newUser.UserName, newUser.UserRole);
             }
+            CaptchaHelper captchaHelper = new CaptchaHelper();
+            string captchaResponse = captchaHelper.CheckRecaptcha();
+            ViewBag.CaptchaResponse = captchaResponse;
+
             return View();
         }
 

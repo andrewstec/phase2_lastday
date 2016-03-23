@@ -143,6 +143,12 @@
             </div>
         </div>
         }
+        @using (Html.BeginForm())
+        {
+            <div class="g-recaptcha inp50" data-sitekey="6LfOlRsTAAAAAMMyVuaN67OsgxwpngyFZpH7IeyS"></div>
+                    <input type="submit" value="Create" class="btn btn-default" />
+        }
+        @Html.Raw(ViewBag.CaptchaResponse)
 
         <div>
             @Html.ActionLink("Back to List", "Index")
