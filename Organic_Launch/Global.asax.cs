@@ -48,6 +48,7 @@ namespace Organic_Launch
             VisitRepo visit = new VisitRepo();
             visit.removeOldVisits(DateTime.Now);
             visit.addVisit(helper.SessionID, helper.Start);
+
         }
 
         protected void Session_End(object sender, EventArgs e)
