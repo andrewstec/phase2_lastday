@@ -12,7 +12,8 @@
 </head>
 <body>
     <div> 
-        @Html.Raw(ViewBag.FakeConfirmation)
+       Congratulation! 
     </div>
+    @Html.ActionLink("Login ", "Login", "Home") @Html.Raw(User.Identity.Name)
 </body>
 </html>

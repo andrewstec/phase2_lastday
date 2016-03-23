@@ -126,10 +126,7 @@ namespace WebApplication1.Controllers
 
             if (user != null)
             {
-                var code = manager.GeneratePasswordResetToken(user.Id);
-                var callbackUrl = Url.Action("ResetPassword", "Home",
-                                             new { userId = user.Id, code = code },
-                                             protocol: Request.Url.Scheme);
+               
                 string emailMessage = "Email successfully sent. Please check your email to reset your password";
 
                 string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(email, emailMessage));
@@ -169,25 +166,7 @@ namespace WebApplication1.Controllers
         }
 
 
-        public ActionResult ConfirmEmail(string userID, string code)
-        {
-            var userStore = new UserStore<IdentityUser>();
-            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
-            var user = manager.FindById(userID);
-            CreateTokenProvider(manager, EMAIL_CONFIRMATION);
-            try
-            {
-                IdentityResult result = manager.ConfirmEmail(userID, code);
-                if (result.Succeeded)
-                    ViewBag.Message = "You are now registered!";
-            }
-            catch
-            {
-                ViewBag.Message = "Validation attempt failed!";
-            }
-            return View();
-        }
-
+        
 
         void CreateTokenProvider(UserManager<IdentityUser> manager, string tokenType)
         {
@@ -256,8 +235,10 @@ namespace WebApplication1.Controllers
             System.Threading.Thread.Sleep(1000);
             if (ModelState.IsValid)
             {
-                if ((ValidLogin(login)))
+
+                if ((ValidLogin(login) && identityUser.EmailConfirmed)) 
                 {
+                //    if(identityUser.)
                     IAuthenticationManager authenticationManager
                                            = HttpContext.GetOwinContext().Authentication;
                     authenticationManager
@@ -299,6 +280,7 @@ namespace WebApplication1.Controllers
             ViewBag.errorMsg = "Invalid Username or Password";
             return View();
         }
+
         [HttpGet]
         public ActionResult Register()
         {
@@ -342,9 +324,44 @@ namespace WebApplication1.Controllers
                                              userIdentity);
                 string testVariable = newUser.UserRole;
                 AddUserToRole(newUser.UserName, newUser.UserRole);
+
+                CreateTokenProvider(manager, EMAIL_CONFIRMATION);
+
+                var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
+                var callbackUrl = Url.Action("ConfirmEmail", "Home",
+                                                new { userId = identityUser.Id, code = code },
+                                                    protocol: Request.Url.Scheme);
+
+                string emailMessage = "Please confirm your account by clicking this link: <a href=\""
+                                    + callbackUrl + "\">Confirm Registration</a>";
+
+                string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(newUser.Email, emailMessage));
+
+                ViewBag.ConfirmationResponse = response;
+            }
+            ViewBag.ErrorResponse = "There was an error with the input provided";
+            return View();
+        }
+
+        public ActionResult ConfirmEmail(string userID, string code)
+        {
+            var userStore = new UserStore<IdentityUser>();
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+            var user = manager.FindById(userID);
+            CreateTokenProvider(manager, EMAIL_CONFIRMATION);
+            try
+            {
+                IdentityResult result = manager.ConfirmEmail(userID, code);
+                if (result.Succeeded)
+                    ViewBag.Message = "You are now registered!";
+            }
+            catch
+            {
+                ViewBag.Message = "Validation attempt failed!";
             }
             return View();
         }
+
 
         [Authorize(Roles = "Admin")]
         public ActionResult SecureArea()
