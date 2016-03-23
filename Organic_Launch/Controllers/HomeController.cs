@@ -309,6 +309,16 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisteredUser newUser)
         {
+
+            CaptchaHelper captchaHelper = new CaptchaHelper();
+            string captchaResponse = captchaHelper.CheckRecaptcha();
+            if (captchaResponse != "Valid")
+            {
+                ViewBag.CaptchaResponse = captchaResponse;
+                return View();
+
+            }
+
             var userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore)
             {
@@ -323,6 +333,8 @@ namespace WebApplication1.Controllers
                 Email = newUser.Email
             };
             IdentityResult result = manager.Create(identityUser, newUser.Password);
+
+            
 
             if (result.Succeeded)
             {
@@ -344,9 +356,6 @@ namespace WebApplication1.Controllers
                 string testVariable = newUser.UserRole;
                 AddUserToRole(newUser.UserName, newUser.UserRole);
             }
-            CaptchaHelper captchaHelper = new CaptchaHelper();
-            string captchaResponse = captchaHelper.CheckRecaptcha();
-            ViewBag.CaptchaResponse = captchaResponse;
 
             return View();
         }
