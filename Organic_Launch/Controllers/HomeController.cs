@@ -127,12 +127,17 @@ namespace WebApplication1.Controllers
 
             if (user != null)
             {
-               
-                string emailMessage = "Email successfully sent. Please check your email to reset your password";
+
+                var code = manager.GeneratePasswordResetToken(user.Id);
+                string callbackUrl = Url.Action("ResetPassword", "Home",
+                                             new { userId = user.Id, code = code },
+                                             protocol: Request.Url.Scheme);
+                string emailMessage = "Please reset your password by clicking <a href=\""
+                                         + callbackUrl + "\">here</a>";
 
                 string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(email, emailMessage));
 
-                ViewBag.FakeEmailMessage = emailMessage;
+                ViewBag.FakeEmailMessage = "Email successfully sent. Please check your email to reset your password";
 
                 return View();
             }
@@ -142,6 +147,19 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
+        public ActionResult UpdatePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UpdatePassword()
+        {
+            return View();
+        }
+
+
+        [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
         {
             ViewBag.PasswordToken = code;
@@ -149,7 +167,7 @@ namespace WebApplication1.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ResetPassword(string password, string passwordConfirm,
+        public ActionResult ResetPassword(string password, string ConfirmPassword,
                                           string passwordToken, string userID)
         {
 
@@ -165,10 +183,7 @@ namespace WebApplication1.Controllers
                 ViewBag.Result = "The password has not been reset.";
             return View();
         }
-
-
-
-
+        
         void CreateTokenProvider(UserManager<IdentityUser> manager, string tokenType)
         {
             manager.UserTokenProvider = new EmailTokenProvider<IdentityUser>();
@@ -296,7 +311,7 @@ namespace WebApplication1.Controllers
             string captchaResponse = captchaHelper.CheckRecaptcha();
             if (captchaResponse != "Valid")
             {
-                ViewBag.CaptchaResponse = captchaResponse;
+                ViewBag.ErrorResponse = "The captcha must be valid";
                 return View();
 
             }

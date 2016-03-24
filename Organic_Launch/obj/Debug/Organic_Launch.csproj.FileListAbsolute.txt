@@ -483,3 +483,5 @@ C:\Users\a00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\Recaptcha.pdb
 C:\Users\a00594521\Source\Repos\phase2_lastday\Organic_Launch\obj\Debug\Organic_Launch.csprojResolveAssemblyReference.cache
 C:\Users\a00594521\Source\Repos\phase2_lastday\Organic_Launch\obj\Debug\Organic_Launch.dll
 C:\Users\a00594521\Source\Repos\phase2_lastday\Organic_Launch\obj\Debug\Organic_Launch.pdb
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\Recaptcha.dll
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\Recaptcha.pdb

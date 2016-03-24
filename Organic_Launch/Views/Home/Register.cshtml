@@ -135,13 +135,23 @@
                 </div>
             </div>
 
-
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <div class="g-recaptcha inp50" data-sitekey="6LfOlRsTAAAAAMMyVuaN67OsgxwpngyFZpH7IeyS"></div>
                     <input type="submit" value="Create" class="btn btn-default" />
                 </div>
             </div>
+
+            @if (ViewBag.ErrorResponse != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-10">
+                        <div class="alert alert-danger">
+                            <strong>Error</strong> @ViewBag.ErrorResponse
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
         }
 

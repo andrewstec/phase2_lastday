@@ -91,7 +91,7 @@ namespace Organic_Launch.Controllers
             //VisitRepo visitRepo = new VisitRepo();
             //visitRepo.removeVisit(id);
 
-            return RedirectToAction("Index", "Cart");
+            return RedirectToAction("Products", "Cart");
         }
 
         public ActionResult Products()
