@@ -551,6 +551,7 @@
     <Content Include="Views\Cart\MyCart.cshtml" />
     <Content Include="Views\Cart\Thankyou.cshtml" />
     <Content Include="Views\Cart\ViewCart.cshtml" />
+    <Content Include="Views\Home\UpdatePassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

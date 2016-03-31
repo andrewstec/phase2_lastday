@@ -37,3 +37,23 @@ textarea {
         color:#fff;
         padding:67px 20px;
     }
+
+/*------------------------- */
+
+.msg {
+    padding: 1em 1.618em;
+    margin-bottom: 2.618em;
+    margin-left: 0;
+    color: #fff;
+    clear: both;
+    margin-top: 2.618em;
+     border-left: .618em solid rgba(0,0,0,.15);
+}
+
+.error_msg{
+    background-color: #831F0F; 
+}
+
+.valid_msg {
+    background-color: #0f834d;
+}

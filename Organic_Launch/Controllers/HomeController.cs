@@ -153,8 +153,27 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public ActionResult UpdatePassword()
+        public ActionResult UpdatePassword(RegisteredUser registeredUser)
         {
+            try
+            {
+
+                UserManager<IdentityUser> userManager =
+                new UserManager<IdentityUser>(new UserStore<IdentityUser>());
+
+                var user = userManager.FindByEmail(registeredUser.Email);
+
+                userManager.RemovePassword(user.Id);
+
+                userManager.AddPassword(user.Id, registeredUser.Password);
+            }
+            catch(Exception e)
+            {
+                var error = e.Message;
+                ViewBag.Error = "There was an error with your request.";
+                return View();
+            }
+            ViewBag.Message = "Password Changes Successfully!";
             return View();
         }
 
