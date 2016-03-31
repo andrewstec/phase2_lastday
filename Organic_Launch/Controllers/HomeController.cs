@@ -15,6 +15,7 @@ using WebApplication1.Models;
 using WebApplication1.ViewModels;
 using WebApplication3.BusinessLogic;
 using WebApplication1.BusinessLayer;
+using Organic_Launch.PayPal;
 
 namespace WebApplication1.Controllers
 {
@@ -151,13 +152,6 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
-        [HttpPost]
-        public ActionResult UpdatePassword()
-        {
-            return View();
-        }
-
 
         [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
@@ -404,6 +398,27 @@ namespace WebApplication1.Controllers
             var authenticationManager = ctx.Authentication;
             authenticationManager.SignOut();
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult PayPal()
+        {
+            Paypal_IPN paypalResponse = new Paypal_IPN("test");
+
+            if (paypalResponse.TXN_ID != null)
+            {
+                FarmSalePayPalEntities context = new FarmSalePayPalEntities();
+                IPN ipn = new IPN();
+                ipn.transactionID = paypalResponse.TXN_ID;
+                decimal amount = Convert.ToDecimal(paypalResponse.PaymentGross);
+                ipn.amount = amount;
+                ipn.buyerEmail = paypalResponse.PayerEmail;
+                ipn.txTime = DateTime.Now;
+                ipn.custom = paypalResponse.Custom;
+                ipn.paymentStatus = paypalResponse.PaymentStatus;
+                context.IPNs.Add(ipn);
+                context.SaveChanges();
+            }
+            return View();
         }
 
     }
