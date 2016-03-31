@@ -109,6 +109,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Page = "homepage";
             return View();
         }
 

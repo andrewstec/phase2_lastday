@@ -29,6 +29,7 @@
                         {
                             <li></li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") </li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Accounts", "ListAccounts", "Admin")</li>
                             <li>@Html.ActionLink("Farms", "ListFarmAccounts", "Admin")</li>
                         }
@@ -44,6 +45,7 @@
                         {
                             <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name}, null)</li>
                             <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
                         }
@@ -64,6 +66,63 @@
         </div>
     </div>
 
+    @if (ViewBag.Page != null)
+    {
+        <header class="@ViewBag.Page">
+
+            <div class="header_container">
+                <h1>Organic Launch</h1>
+                <h2>Our Company's Slogan.</h2>
+                <div class="header_a_cont">
+                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                </div>
+            </div>
+
+            @*<section id="slider-section">
+                <div class="slider">
+                    <ul>
+                        <li class="produce">
+
+                            <div>
+                                <h2>$15.00 OFF</h2>
+                                <p>Vancouver Wheat Flour</p>
+                                <div class="header_a_cont">
+                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="meat">
+
+                            <div>
+                                <h2>up to 40% OFF</h2>
+                                <p>100% pure canadian beef</p>
+                                <div class="header_a_cont">
+                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        <li class="products">
+                            <div>
+                                <h2>over 30% OFF</h2>
+                                <p>Oragnic and Nutritious Radishes</p>
+                                <div class="header_a_cont">
+                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>*@<!-- Slider Section End -->
+
+        </header>
+    }
+
+   
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -81,5 +140,7 @@
 
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/unslider.min.js"></script>
+    <script src="~/scripts/app.js"></script>
 </body>
 </html>

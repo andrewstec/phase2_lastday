@@ -1,59 +1,149 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+﻿
+/*=========================
+    PHONE
+=========================*/
+@media only screen and (min-width:250px) {
 
 
-/*----------------------- Landing Page Styles*/
-#landing_page {
-    text-align: center;
-}
-
-    #landing_page section {
-        padding: 100px 50px;
+    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    /*----------------------- Landing Page Styles*/
+    #landing_page {
+        text-align: center;
     }
 
-    #landing_page header {
-        background-image: url('Images/farm.png');
+        #landing_page section {
+            padding: 100px 50px;
+        }
+
+    header.homepage {
+        background-image: url('../Images/banner.png');
         background-repeat: no-repeat;
-        background-size: cover;
-        height:357px;
+        text-align: center;
+        height: 700px;
+        margin-bottom: 100px;
     }
 
-    #landing_page .header_container{
-        color:#fff;
-        padding:67px 20px;
+        header.homepage .header_container {
+            color: #fff;
+            padding: 240px 20px 0;
+        }
+        
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+
+
+
+
+
+
+     /*------------------------- SLIDER STYLES*/
+    
+
+    /* ===  Slider Styles === */
+    /*section#slider-section {
+        padding: 0;
+    }*/
+    /* Slide in from the right*/
+    /*.slider {
+        position: relative;
+        overflow: auto;
+        height: 500px;
     }
 
-/*------------------------- */
+        .slider ul {
+            padding: 0;
+        }
 
-.msg {
-    padding: 1em 1.618em;
-    margin-bottom: 2.618em;
-    margin-left: 0;
-    color: #fff;
-    clear: both;
-    margin-top: 2.618em;
-     border-left: .618em solid rgba(0,0,0,.15);
+        .slider li {
+            list-style: none;
+        }
+
+        .slider ul li {
+            float: right;
+            height: 500px;
+        }*/
+
+    /* === Background img's for li === */
+        /*.produce {
+            background-image: url('../Images/flour-powder-wheat-jar.jpg');
+            background-repeat: no-repeat;
+       
+        }
+
+        .meat {
+            background-image: url('../Images/pexels-photo-24413.jpg');
+            background-repeat: no-repeat;
+        
+        }
+        .products {
+            background-image: url('../Images/healthy-vegetables-restaurant-nature.jpg');
+            background-repeat: no-repeat;
+        
+        }*/
+    /* end Background img's for li */
+
+    /*div.slider div {
+        padding: 100px 20px;
+        text-align: right;
+    }
+
+    div.slider h2 {
+        text-transform: uppercase;
+        font-size: 80px;
+    }
+
+    div.slider p {
+        font-size: 19px;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    li div {
+        color: #fff;
+    }*/
+
+    /*------------------------- */
+
+    .msg {
+        padding: 1em 1.618em;
+        margin-bottom: 2.618em;
+        margin-left: 0;
+        color: #fff;
+        clear: both;
+        margin-top: 2.618em;
+        border-left: .618em solid rgba(0,0,0,.15);
+    }
+
+    .error_msg {
+        background-color: #831F0F;
+    }
+
+    .valid_msg {
+        background-color: #0f834d;
+    }
+
+  
 }
 
-.error_msg{
-    background-color: #831F0F; 
+/*=========================
+    TABLET
+=========================*/
+@media only screen and (min-width : 768px) {
+
+    header.homepage {margin-top: 20px;}
 }
 
-.valid_msg {
-    background-color: #0f834d;
+
+/*=========================
+    DESKTOP
+=========================*/
+@media only screen and (min-width : 990px) {
 }
