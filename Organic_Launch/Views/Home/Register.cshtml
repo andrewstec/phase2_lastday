@@ -167,9 +167,10 @@
     window.onload = function () {
 
         var toggle = document.getElementById("farm-control");
-
+        document.getElementById("toggle-farm").className = "hidden";
         toggle.onchange = function () {
 
+           
             if (toggle.options[toggle.selectedIndex].value != "Farm") {
                 document.getElementById("toggle-farm").className = "hidden";
             }

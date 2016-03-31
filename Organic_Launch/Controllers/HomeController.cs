@@ -361,6 +361,7 @@ namespace WebApplication1.Controllers
                 string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(newUser.Email, emailMessage));
 
                 ViewBag.ConfirmationResponse = response;
+                return View();
             }
             ViewBag.ErrorResponse = "There was an error with the input provided";
             return View();
