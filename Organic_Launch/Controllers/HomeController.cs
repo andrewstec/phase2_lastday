@@ -172,7 +172,7 @@ namespace WebApplication1.Controllers
         {
 
             var userStore = new UserStore<IdentityUser>();
-            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore); 
             var user = manager.FindById(userID);
             CreateTokenProvider(manager, PASSWORD_RESET);
 
