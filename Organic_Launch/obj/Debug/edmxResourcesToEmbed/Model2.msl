@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="FarmSaleDBModel1StoreContainer" CdmEntityContainer="FarmSaleDBEntities1">
+  <EntityContainerMapping StorageEntityContainer="FarmSaleDBModelStoreContainer" CdmEntityContainer="FarmSaleDBEntities1">
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.sysdiagram">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -13,18 +13,17 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Accounts">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.Account">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Account">
         <MappingFragment StoreEntitySet="Account">
           <ScalarProperty Name="accountID" ColumnName="accountID" />
           <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="accountType" ColumnName="accountType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AccountDetails">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.AccountDetail">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.AccountDetail">
         <MappingFragment StoreEntitySet="AccountDetail">
           <ScalarProperty Name="accountDetailID" ColumnName="accountDetailID" />
           <ScalarProperty Name="accountID" ColumnName="accountID" />
@@ -34,7 +33,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Addresses">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.Address">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Address">
         <MappingFragment StoreEntitySet="Address">
           <ScalarProperty Name="addressID" ColumnName="addressID" />
           <ScalarProperty Name="streetNum" ColumnName="streetNum" />
@@ -46,16 +45,19 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Farms">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.Farm">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Farm">
         <MappingFragment StoreEntitySet="Farm">
           <ScalarProperty Name="farmID" ColumnName="farmID" />
           <ScalarProperty Name="farmName" ColumnName="farmName" />
           <ScalarProperty Name="farmProfile" ColumnName="farmProfile" />
+          <ScalarProperty Name="farmCity" ColumnName="farmCity" />
+          <ScalarProperty Name="farmProvince" ColumnName="farmProvince" />
+          <ScalarProperty Name="farmZip" ColumnName="farmZip" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FarmProducts">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.FarmProduct">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.FarmProduct">
         <MappingFragment StoreEntitySet="FarmProduct">
           <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
           <ScalarProperty Name="farmID" ColumnName="farmID" />
@@ -64,26 +66,49 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Orders">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.Order">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Order">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="orderID" ColumnName="orderID" />
           <ScalarProperty Name="accountID" ColumnName="accountID" />
           <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
-          <ScalarProperty Name="qty" ColumnName="qty" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="FarmSaleDBModel1.Product">
+      <EntityTypeMapping TypeName="FarmSaleDBModel.Product">
         <MappingFragment StoreEntitySet="Product">
           <ScalarProperty Name="productID" ColumnName="productID" />
           <ScalarProperty Name="productName" ColumnName="productName" />
-          <ScalarProperty Name="priceInKg" ColumnName="price" />
+          <ScalarProperty Name="priceInKg" ColumnName="priceInKg" />
+          <ScalarProperty Name="qtyInKG" ColumnName="qtyInKG" />
           <ScalarProperty Name="productCategory" ColumnName="productCategory" />
           <ScalarProperty Name="productDescription" ColumnName="productDescription" />
-          <ScalarProperty Name="qty" ColumnName="qty" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FarmSaleDBModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FarmSaleDBModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FarmSaleDBModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FarmSaleDBModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmSaleDBModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FarmSaleDBModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FarmSaleDBModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FarmSaleDBModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FarmSaleDBModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

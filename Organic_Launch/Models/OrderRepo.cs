@@ -21,13 +21,12 @@ namespace WebApplication1.Models
             return order;
         }
 
-        public void AddOrder(int accountID, int farmProductID, int qty)
+        public void AddOrder(int accountID, int farmProductID)
         {
             FarmSaleDBEntities1 db = new FarmSaleDBEntities1();
             Order order = new Order();
             order.accountID = accountID;
             order.farmProductID = farmProductID;
-            order.qty = qty;
             db.Orders.Add(order);
             db.SaveChanges();
         }

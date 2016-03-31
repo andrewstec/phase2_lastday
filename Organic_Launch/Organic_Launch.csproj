@@ -282,6 +282,16 @@
       <DependentUpon>Model3.edmx</DependentUpon>
       <LastGenOutput>Model3.cs</LastGenOutput>
     </Content>
+    <Content Include="Model5.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model5.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.cs</LastGenOutput>
+    </Content>
     <Content Include="obj\Debug\Organic_Launch.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Organic_Launch.dll" />
     <Content Include="obj\Debug\Organic_Launch.pdb" />
@@ -338,6 +348,13 @@
     </EntityDeploy>
     <Content Include="Model3.edmx.diagram">
       <DependentUpon>Model3.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model5.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model5.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model5.edmx.diagram">
+      <DependentUpon>Model5.edmx</DependentUpon>
     </Content>
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\app.js" />
@@ -417,6 +434,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IPN.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -462,6 +482,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model5.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountDetailRepo.cs" />
     <Compile Include="Models\AccountRepo.cs" />
     <Compile Include="Models\AddressRepo.cs" />
@@ -480,6 +515,7 @@
     <Compile Include="Order.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="PayPal\Paypal_IPN.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -521,6 +557,7 @@
     <Content Include="Views\Buyer\MyAccount.cshtml" />
     <Content Include="Views\Admin\ListFarmAccounts.cshtml" />
     <Content Include="Views\Farm\Details.cshtml" />
+    <Content Include="Views\Home\PayPal.cshtml" />
     <None Include="Views\Home\Register.cshtmlold2" />
     <Content Include="Views\Home\SecureArea.cshtml" />
     <Content Include="Views\Home\ConfirmEmail.cshtml" />
@@ -551,7 +588,6 @@
     <Content Include="Views\Cart\MyCart.cshtml" />
     <Content Include="Views\Cart\Thankyou.cshtml" />
     <Content Include="Views\Cart\ViewCart.cshtml" />
-    <Content Include="Views\Home\UpdatePassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

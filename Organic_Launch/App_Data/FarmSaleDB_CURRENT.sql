@@ -23,14 +23,18 @@ CREATE TABLE Account (
 CREATE TABLE Product (
        productID                  INT IDENTITY PRIMARY KEY,
        productName                VARCHAR(50),
-       price                      DECIMAL(19, 2),
+       priceInKg                  DECIMAL(19, 2),
+	   qtyInKG					  DECIMAL(19, 2),
        productCategory            VARCHAR(50),
-       productDescription  VARCHAR(255)
+       productDescription		  VARCHAR(255)
   );
 CREATE TABLE Farm (
        farmID                     INT IDENTITY PRIMARY KEY,
        farmName                   VARCHAR(50),
-       farmProfile                VARCHAR(255)
+       farmProfile                VARCHAR(255),
+	   farmCity					  VARCHAR(50),
+	   farmProvince				  VARCHAR(50),
+	   farmZip					  VARCHAR(50),
   );
 CREATE TABLE Address (
        addressID            INT IDENTITY PRIMARY KEY,
@@ -38,7 +42,7 @@ CREATE TABLE Address (
        streetName           VARCHAR(50),
        province             VARCHAR(50),
        city                 VARCHAR(50),
-       zip                        VARCHAR(50)
+       zip                  VARCHAR(50)
 );
 CREATE TABLE AccountDetail (
        accountDetailID INT IDENTITY PRIMARY KEY,
@@ -48,8 +52,7 @@ CREATE TABLE AccountDetail (
 );
 CREATE TABLE FarmProduct (
        farmProductID INT IDENTITY PRIMARY KEY,
-       qty           INT,
-       farmID        INT,
+       farmID        INT, 
        productID     INT,
 );
 CREATE TABLE [Order] (
@@ -67,23 +70,23 @@ ALTER TABLE [Order] ADD CONSTRAINT FKOrder2 FOREIGN KEY (farmProductID) REFERENC
 ALTER TABLE AccountDetail ADD CONSTRAINT FKAccountDet1 FOREIGN KEY (addressID) REFERENCES Address (addressID);
  
 INSERT INTO Account VALUES('Tin', 'tlau@my.bcit.ca', 'farmer');
-INSERT INTO Product VALUES('Lemons', 40.34, 'Fruit', 'Fresh lemons.');
-INSERT INTO Farm VALUES('Partridge Farms', 'Patridge farms was established during the early American pioneer days in the days of Fort Vancouver. We have been producing poultry and lemons ever since.');
+INSERT INTO Product VALUES('Lemons', 40.34, 323.83, 'Fruit', 'Fresh lemons.');
+INSERT INTO Farm VALUES('Partridge Farms', 'Patridge farms was established during the early American pioneer days in the days of Fort Vancouver. We have been producing poultry and lemons ever since.', 'Surrey', 'BC', 'V5K 2G3');
 INSERT INTO Address VALUES('1071', 'Harold Road', 'BC', 'Vancouver', 'Canada');
-INSERT INTO FarmProduct VALUES(5, 1, 1);
+INSERT INTO FarmProduct VALUES(1, 1);
 INSERT INTO [Order] VALUES(1, 1);
  
 INSERT INTO Account VALUES('Slav', 'svislas@my.sfu.ca', 'buyer');
-INSERT INTO Product VALUES('Oranges', 1.45, 'Fruit', 'Well-ripened oranges.');
-INSERT INTO Farm VALUES('Orangeville Farms', 'Organville farms takes citrus seriously. Deliscous, well-ripened fruit makes for excellent quality refreshments.');
+INSERT INTO Product VALUES('Oranges', 1.45, 54.43, 'Fruit', 'Well-ripened oranges.');
+INSERT INTO Farm VALUES('Orangeville Farms', 'Organville farms takes citrus seriously. Deliscous, well-ripened fruit makes for excellent quality refreshments.', 'Cloverdale', 'BC', 'V2G 3B3');
 INSERT INTO Address VALUES('234', 'Stadium Road', 'BC', 'Vancouver', 'Canada');
-INSERT INTO FarmProduct VALUES(5, 1, 1);
+INSERT INTO FarmProduct VALUES(1, 1);
 INSERT INTO [Order] VALUES(1, 1);
  
 INSERT INTO Account VALUES('Marrion', 'mlulu@my.ubc.ca', 'buyer');
-INSERT INTO Product VALUES('Kobe Beef', 34578.34, 'Beef', '1-month aged Kobe beef.');
-INSERT INTO Farm VALUES('Japan Beef Farms', 'The Kobe beef producer of Canada is regarded as the highest quality beef producer in the Pacific Northwest area.');
+INSERT INTO Product VALUES('Kobe Beef', 34578.34, 234.45, 'Beef', '1-month aged Kobe beef.');
+INSERT INTO Farm VALUES('Japan Beef Farms', 'The Kobe beef producer of Canada is regarded as the highest quality beef producer in the Pacific Northwest area.', 'Aldergrove', 'BC', 'V1F 2B4');
 INSERT INTO Address VALUES('54664', 'King George Road', 'BC', 'Prince George', 'Canada');
-INSERT INTO FarmProduct VALUES(5, 1, 1);
+INSERT INTO FarmProduct VALUES(1, 1);
 INSERT INTO [Order] VALUES(1, 1);
  

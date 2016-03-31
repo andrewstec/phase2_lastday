@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FarmSaleDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="FarmSaleDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -21,7 +21,6 @@
           </Key>
           <Property Name="accountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="username" Type="varchar" MaxLength="50" />
-          <Property Name="password" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="accountType" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -52,6 +51,9 @@
           <Property Name="farmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="farmName" Type="varchar" MaxLength="50" />
           <Property Name="farmProfile" Type="varchar" MaxLength="255" />
+          <Property Name="farmCity" Type="varchar" MaxLength="50" />
+          <Property Name="farmProvince" Type="varchar" MaxLength="50" />
+          <Property Name="farmZip" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="FarmProduct">
           <Key>
@@ -68,7 +70,6 @@
           <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="accountID" Type="int" />
           <Property Name="farmProductID" Type="int" />
-          <Property Name="qty" Type="int" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -76,10 +77,10 @@
           </Key>
           <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="productName" Type="varchar" MaxLength="50" />
-          <Property Name="price" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="priceInKg" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="qtyInKG" Type="decimal" Precision="19" Scale="2" />
           <Property Name="productCategory" Type="varchar" MaxLength="50" />
           <Property Name="productDescription" Type="varchar" MaxLength="255" />
-          <Property Name="qty" Type="int" />
         </EntityType>
         <Association Name="FKAccount1">
           <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
@@ -165,7 +166,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FarmSaleDBModel1StoreContainer">
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="FarmSaleDBModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Account" EntityType="Self.Account" Schema="usermanager" store:Type="Tables" />
           <EntitySet Name="AccountDetail" EntityType="Self.AccountDetail" Schema="usermanager" store:Type="Tables" />
@@ -207,7 +239,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="FarmSaleDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="FarmSaleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -224,7 +256,6 @@
           </Key>
           <Property Name="accountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="accountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AccountDetails" Relationship="Self.FKAccount1" FromRole="Account" ToRole="AccountDetail" />
@@ -261,6 +292,9 @@
           <Property Name="farmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="farmName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="farmProfile" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="farmCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="farmProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="farmZip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AccountDetails" Relationship="Self.FKAccount2" FromRole="Farm" ToRole="AccountDetail" />
           <NavigationProperty Name="FarmProducts" Relationship="Self.FKFarmProduct1" FromRole="Farm" ToRole="FarmProduct" />
         </EntityType>
@@ -282,7 +316,6 @@
           <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="accountID" Type="Int32" />
           <Property Name="farmProductID" Type="Int32" />
-          <Property Name="qty" Type="Int32" />
           <NavigationProperty Name="Account" Relationship="Self.FKOrder1" FromRole="Order" ToRole="Account" />
           <NavigationProperty Name="FarmProduct" Relationship="Self.FKOrder2" FromRole="Order" ToRole="FarmProduct" />
         </EntityType>
@@ -293,9 +326,9 @@
           <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="priceInKg" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="qtyInKG" Type="Decimal" Precision="19" Scale="2" />
           <Property Name="productCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="productDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="qty" Type="Int32" />
           <NavigationProperty Name="FarmProducts" Relationship="Self.FKFarmProduct2" FromRole="Product" ToRole="FarmProduct" />
         </EntityType>
         <Association Name="FKAccount1">
@@ -419,15 +452,56 @@
             <End Role="FarmProduct" EntitySet="FarmProducts" />
             <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FarmSaleDBModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FarmSaleDBModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FarmSaleDBModel1StoreContainer" CdmEntityContainer="FarmSaleDBEntities1">
+        <EntityContainerMapping StorageEntityContainer="FarmSaleDBModelStoreContainer" CdmEntityContainer="FarmSaleDBEntities1">
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.sysdiagram">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -438,18 +512,17 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Accounts">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.Account">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.Account">
               <MappingFragment StoreEntitySet="Account">
                 <ScalarProperty Name="accountID" ColumnName="accountID" />
                 <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="accountType" ColumnName="accountType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="AccountDetails">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.AccountDetail">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.AccountDetail">
               <MappingFragment StoreEntitySet="AccountDetail">
                 <ScalarProperty Name="accountDetailID" ColumnName="accountDetailID" />
                 <ScalarProperty Name="accountID" ColumnName="accountID" />
@@ -459,7 +532,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Addresses">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.Address">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.Address">
               <MappingFragment StoreEntitySet="Address">
                 <ScalarProperty Name="addressID" ColumnName="addressID" />
                 <ScalarProperty Name="streetNum" ColumnName="streetNum" />
@@ -471,16 +544,19 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Farms">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.Farm">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.Farm">
               <MappingFragment StoreEntitySet="Farm">
                 <ScalarProperty Name="farmID" ColumnName="farmID" />
                 <ScalarProperty Name="farmName" ColumnName="farmName" />
                 <ScalarProperty Name="farmProfile" ColumnName="farmProfile" />
+                <ScalarProperty Name="farmCity" ColumnName="farmCity" />
+                <ScalarProperty Name="farmProvince" ColumnName="farmProvince" />
+                <ScalarProperty Name="farmZip" ColumnName="farmZip" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FarmProducts">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.FarmProduct">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.FarmProduct">
               <MappingFragment StoreEntitySet="FarmProduct">
                 <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
                 <ScalarProperty Name="farmID" ColumnName="farmID" />
@@ -489,27 +565,50 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.Order">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="orderID" ColumnName="orderID" />
                 <ScalarProperty Name="accountID" ColumnName="accountID" />
                 <ScalarProperty Name="farmProductID" ColumnName="farmProductID" />
-                <ScalarProperty Name="qty" ColumnName="qty" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="FarmSaleDBModel1.Product">
+            <EntityTypeMapping TypeName="FarmSaleDBModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="productID" ColumnName="productID" />
                 <ScalarProperty Name="productName" ColumnName="productName" />
-                <ScalarProperty Name="priceInKg" ColumnName="price" />
+                <ScalarProperty Name="priceInKg" ColumnName="priceInKg" />
+                <ScalarProperty Name="qtyInKG" ColumnName="qtyInKG" />
                 <ScalarProperty Name="productCategory" ColumnName="productCategory" />
                 <ScalarProperty Name="productDescription" ColumnName="productDescription" />
-                <ScalarProperty Name="qty" ColumnName="qty" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FarmSaleDBModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FarmSaleDBModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FarmSaleDBModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FarmSaleDBModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FarmSaleDBModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FarmSaleDBModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FarmSaleDBModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FarmSaleDBModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FarmSaleDBModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

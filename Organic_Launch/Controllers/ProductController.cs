@@ -25,14 +25,14 @@ namespace Organic_Launch.Controllers
 
         //Needs styling
         [HttpPost]
-        public ActionResult Add(string productName, decimal price, string productCategory, string productDescription, int qty) 
+        public ActionResult Add(string productName, decimal price, string productCategory, string productDescription, int qtyInKG)
         {
             Product product = new Product();
             product.productName = productName;
             product.priceInKg = price;
             product.productCategory = productCategory;
             product.productDescription = productDescription;
-            product.qty = qty;
+            product.qtyInKG = qtyInKG;
 
             FarmSaleDBEntities1 db = new FarmSaleDBEntities1();
             db.Products.Add(product);
