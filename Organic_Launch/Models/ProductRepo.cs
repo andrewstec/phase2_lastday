@@ -21,7 +21,7 @@ namespace WebApplication1.Models
             return product;
         }
 
-        public void AddProduct(string name, decimal price, string category, string description, int qty)
+        public void AddProduct(string name, decimal price, string category, string description, int qtyInKG)
         {
             FarmSaleDBEntities1 db = new FarmSaleDBEntities1();
 
@@ -30,7 +30,7 @@ namespace WebApplication1.Models
             product.priceInKg = price;
             product.productCategory = category;
             product.productDescription = description;
-            product.qty = qty;
+            product.qtyInKG = qtyInKG;
 
             db.Products.Add(product);
             db.SaveChanges();
@@ -54,7 +54,7 @@ namespace WebApplication1.Models
                 product.priceInKg = price;
                 product.productCategory = category;
                 product.productDescription = description;
-                product.qty = qty;
+                product.qtyInKG = qty;
                 db.SaveChanges();
             }
         }
@@ -93,7 +93,7 @@ namespace WebApplication1.Models
                     Price = (decimal)p.priceInKg,
                     ProductCategory = p.productCategory,
                     Description = p.productDescription,
-                    Qty = (int)p.qty,
+                    QtyInKG = p.qtyInKG,
                     FarmName = f.farmName
                 };
             return products;

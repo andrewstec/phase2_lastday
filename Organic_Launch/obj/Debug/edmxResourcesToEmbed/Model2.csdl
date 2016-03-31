@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="FarmSaleDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="FarmSaleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -16,7 +16,6 @@
     </Key>
     <Property Name="accountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="accountType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="AccountDetails" Relationship="Self.FKAccount1" FromRole="Account" ToRole="AccountDetail" />
@@ -53,6 +52,9 @@
     <Property Name="farmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="farmName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="farmProfile" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="farmCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="farmProvince" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="farmZip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="AccountDetails" Relationship="Self.FKAccount2" FromRole="Farm" ToRole="AccountDetail" />
     <NavigationProperty Name="FarmProducts" Relationship="Self.FKFarmProduct1" FromRole="Farm" ToRole="FarmProduct" />
   </EntityType>
@@ -74,7 +76,6 @@
     <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="accountID" Type="Int32" />
     <Property Name="farmProductID" Type="Int32" />
-    <Property Name="qty" Type="Int32" />
     <NavigationProperty Name="Account" Relationship="Self.FKOrder1" FromRole="Order" ToRole="Account" />
     <NavigationProperty Name="FarmProduct" Relationship="Self.FKOrder2" FromRole="Order" ToRole="FarmProduct" />
   </EntityType>
@@ -85,9 +86,9 @@
     <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="productName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="priceInKg" Type="Decimal" Precision="19" Scale="2" />
+    <Property Name="qtyInKG" Type="Decimal" Precision="19" Scale="2" />
     <Property Name="productCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="productDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="qty" Type="Int32" />
     <NavigationProperty Name="FarmProducts" Relationship="Self.FKFarmProduct2" FromRole="Product" ToRole="FarmProduct" />
   </EntityType>
   <Association Name="FKAccount1">
@@ -211,5 +212,46 @@
       <End Role="FarmProduct" EntitySet="FarmProducts" />
       <End Role="Order" EntitySet="Orders" />
     </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FarmSaleDBModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FarmSaleDBModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e1d49b7c8b684e5a82147e52ac705dae" Name="Diagram1">
-        <EntityTypeShape EntityType="FarmSaleDBModel1.sysdiagram" Width="1.5" PointX="5.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.Account" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.AccountDetail" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.Address" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.Farm" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.FarmProduct" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.Order" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="FarmSaleDBModel1.Product" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKAccount1" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKOrder1" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKAccount2" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKAccountDet1" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKFarmProduct1" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKFarmProduct2" ManuallyRouted="false" />
-        <AssociationConnector Association="FarmSaleDBModel1.FKOrder2" ManuallyRouted="false" />
+      <Diagram DiagramId="8f1e7595300341fdb3ba967c99377d7d" Name="Diagram1">
+        <EntityTypeShape EntityType="FarmSaleDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.Account" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.AccountDetail" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.Address" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.Farm" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.FarmProduct" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.Order" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FarmSaleDBModel.Product" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="FarmSaleDBModel.FKAccount1" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKOrder1" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKAccount2" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKAccountDet1" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKFarmProduct1" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKFarmProduct2" ManuallyRouted="false" />
+        <AssociationConnector Association="FarmSaleDBModel.FKOrder2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

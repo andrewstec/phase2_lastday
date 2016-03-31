@@ -11,7 +11,7 @@ namespace Organic_Launch
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
+    
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +22,10 @@ namespace Organic_Launch
     
         public int productID { get; set; }
         public string productName { get; set; }
-        [DisplayName("Price In Kg")]
         public Nullable<decimal> priceInKg { get; set; }
+        public Nullable<decimal> qtyInKG { get; set; }
         public string productCategory { get; set; }
         public string productDescription { get; set; }
-        public Nullable<int> qty { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FarmProduct> FarmProducts { get; set; }

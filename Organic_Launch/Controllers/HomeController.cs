@@ -152,11 +152,6 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult UpdatePassword()
-        {
-            return View();
-        }
 
 
         [HttpGet]

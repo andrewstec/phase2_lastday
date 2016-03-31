@@ -13,18 +13,18 @@ namespace WebApplication1.Models
         public decimal Price { get; set; }
         public string ProductCategory { get; set; }
         public string Description { get; set; }
-        public int Qty { get; set; }
+        public decimal? QtyInKG { get; set; }
         public string FarmName { get; set; }
 
         public ProductVM() { }
 
-        public ProductVM(string name, decimal price, string category, string description, int qty, string farmName)
+        public ProductVM(string name, decimal price, string category, string description, decimal qtyInKG, string farmName)
         {
             ProductName = name;
             Price = price;
             ProductCategory = category;
             Description = description;
-            Qty = qty;
+            QtyInKG = qtyInKG;
             FarmName = farmName;
         }
     }
