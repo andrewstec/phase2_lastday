@@ -2,61 +2,48 @@
 
     <a href="#" id="scroll_bottom"></a>
 
-    
-    <secion>
-        <div class="ribbon-wrapper big">
-            <span>
-                <span>What We Offer</span>
-            </span>
+    <div class="container">
+        <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+            <h2>Bakery</h2>
+            <p>
+                <img src="~/Images/organic-farm-icons_prod.png" />
+                Enter the world of cereals and grain to discover refined and unrefined products such as wheat, barley and rye.
+            </p>
+            <p>@Html.ActionLink("Bakery", "Bakery", "Product", new { @class = "btn btn-primary" })</p>
         </div>
-
-        <div class="container">
-            <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
-                <h2>Bakery</h2>
-                <p>
-                    <img src="~/Images/organic-farm-icons_prod.png" />
-                    Enter the world of cereals and grain to discover refined and unrefined products such as wheat, barley and rye.
-                </p>
-                <div class="row">
-                    <p>@Html.ActionLink("Bakery", "Produce", "Product", new { @class = "btn btn-primary" })</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
-                <h2>Meat</h2>
-                <p>
-                    <img src="~/Images/organic-farm-icons.png" />
-                    A traditional farm environment leads to well-treated and healthy animals. Find butchered and non-butchered livestock.
-                </p>
-                <div class="row">
-                    <p>@Html.ActionLink("Meat", "Produce", "Product", new { @class = "btn btn-primary" })</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
-                <h2>Produce</h2>
-                <p>
-                    <img src="~/Images/organic-farm-icons_pum.png" />
-                    Fruits and vegetables are what our parents told us to eat. Enjoy their whole and unprocessed properties.
-                </p>
-                <div class="row">
-                    <p>@Html.ActionLink("Produce", "Produce", "Product", new { @class = "btn btn-primary" })</p>
-                </div>
-            </div>
-            <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
-                <h2>Grocery</h2>
-                <p>
-                    <img src="~/Images/organic-farm-icons_eggs.png" />
-                    Not just eggs, but jellies, cheeses, and wines that require that you throw good parties.
-                </p>
-                <div class="row">
-                    <p>@Html.ActionLink("Grocery", "Grocery", "Product", new { @class = "btn btn-primary" })</p>
-                </div>
+        <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+            <h2>Meat</h2>
+            <p>
+                <img src="~/Images/organic-farm-icons.png"  />
+                A traditional farm environment leads to well-treated and healthy animals. Find butchered and non-butchered livestock.
+            </p>
+            <p>@Html.ActionLink("Meat", "Meat", "Product", new { @class = "btn btn-primary" })</p>
+        </div>
+        <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+            <h2>Produce</h2>
+            <p>
+                <img src="~/Images/organic-farm-icons_pum.png" />
+                Fruits and vegetables are what our parents told us to eat. Enjoy their whole and unprocessed properties.
+            </p>
+            <div class="row">
+                <p>@Html.ActionLink("Produce", "Produce", "Product", new { @class = "btn btn-primary" })</p>
             </div>
         </div>
+        <div class="col-xs-12 col-xxs-6 col-sm-6 col-md-3 col-lg-3">
+            <h2>Grocery</h2>
+            <p>
+                <img src="~/Images/organic-farm-icons_eggs.png" />
+                Not just eggs, but jellies, cheeses, and wines that require that you throw good parties.
+            </p>
+            <div class="row">
+                <p>@Html.ActionLink("Grocery", "Grocery", "Product", new { @class = "btn btn-primary" })</p>
+            </div>
+        </div>
+    </div>
 
-    </secion>
     <section class="grey_section">
         <div class="col-sm-6">
-            <img src="~/Images/roots.jpg" />
+
         </div>
 
         <div class="col-sm-6">
@@ -67,9 +54,12 @@
     </section>
 
     <section>
-       
+        <h2>What We Offer</h2> 
         <div>
-            
+            <img src="~/Content/Images/animal-countryside-agriculture-farm.jpg" width="250" height="250" alt="cow" />
+            <img src="~/Content/Images/food-sunset-love-field.jpg" width="250" height="250" alt="wheat" />
+            <img src="~/Content/Images/chickens-866507_640.jpg" width="250" height="250" alt="chickens" />
+            <img src="~/Content/Images/fruit-993904_640.jpg"  width="250" height="250" alt="fruits"/>
         </div>
     </section>
 </div>
