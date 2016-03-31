@@ -29,7 +29,6 @@ namespace WebApplication1.Models
 
             Account account = new Account();
             account.username = username;
-            account.password = password;//Add encryption? Do we need this field?
             account.email = email;
             account.accountType = accountType;
 

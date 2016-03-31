@@ -10,15 +10,10 @@
 namespace Organic_Launch
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Order
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int orderID { get; set; }
-        public Nullable<int> accountID { get; set; }
-        public Nullable<int> farmProductID { get; set; }
-    
-        public virtual Account Account { get; set; }
-        public virtual FarmProduct FarmProduct { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

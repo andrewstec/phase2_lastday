@@ -24,6 +24,9 @@ namespace Organic_Launch
         public int farmID { get; set; }
         public string farmName { get; set; }
         public string farmProfile { get; set; }
+        public string farmCity { get; set; }
+        public string farmProvince { get; set; }
+        public string farmZip { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AccountDetail> AccountDetails { get; set; }
