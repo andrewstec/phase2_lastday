@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.productDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.qty)
+            @Html.DisplayNameFor(model => model.qtyInKG)
         </th>
         <th></th>
     </tr>
@@ -45,7 +45,7 @@
                 @Html.DisplayFor(modelItem => item.productDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.qty)
+                @Html.DisplayFor(modelItem => item.qtyInKG)
             </td>
             <td>
                 @Html.ActionLink("Add To Cart", "AddProduct", new { id = item.productID })
