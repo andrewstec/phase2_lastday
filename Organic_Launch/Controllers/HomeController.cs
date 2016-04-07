@@ -361,8 +361,8 @@ namespace WebApplication1.Controllers
                 string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(newUser.Email, emailMessage));
 
                 ViewBag.ConfirmationResponse = response;
-                TempData["ConfirmationResponse"] = "You have successfully registered for an account. Please login to your account.";
-                return View("Login");
+                TempData["ConfirmationResponse"] = "You have successfully registered for an account. Please verify your account by clicking on the link sent to you in your e-mail.";
+                return RedirectToAction("Login");
             }
             ViewBag.ErrorResponse = "There was an error with the input provided";
             return View();
@@ -378,14 +378,21 @@ namespace WebApplication1.Controllers
             {
                 IdentityResult result = manager.ConfirmEmail(userID, code);
                 if (result.Succeeded)
-                    ViewBag.Message = "You are now registered!";
+                {
+                    TempData["ConfirmationResponse"] = "You have successfully registered for an account. Please verify your account by clicking on the link sent to you in your e-mail.";
+                    return RedirectToAction("Login");
+                }
+                else
+                {
+                    TempData["ConfirmationResponseError"] = "Your validation attempt has failed. We may be experiencing system problems. Please try again later.";
+                    return RedirectToAction("Login");
+                }
             }
             catch
             {
-                ViewBag.Message = "Validation attempt failed!";
+                TempData["ConfirmationResponseError"] = "Your validation attempt has failed. We may be experiencing system problems. Please try again later.";
+                return RedirectToAction("Login");
             }
-
-            return View();
         }
 
 
