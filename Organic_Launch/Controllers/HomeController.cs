@@ -222,6 +222,13 @@ namespace WebApplication1.Controllers
                     userManager.AccessFailed(user.Id);
                     return false;
                 }
+                CaptchaHelper captchaHelper = new CaptchaHelper();
+                string captchaResponse = captchaHelper.CheckRecaptcha();
+                if (captchaResponse != "Valid")
+                {
+                    ViewBag.ErrorResponse = "The captcha must be valid";
+
+                }
             }
             return true;
         }
