@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FarmSalePayPalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IPN">
+    <Key>
+      <PropertyRef Name="transactionID" />
+    </Key>
+    <Property Name="transactionID" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="txTime" Type="DateTime" Precision="3" />
+    <Property Name="custom" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="buyerEmail" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="paymentStatus" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="FarmSalePayPalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IPNs" EntityType="Self.IPN" />
+  </EntityContainer>
+</Schema>
