@@ -56,12 +56,7 @@
                 @Html.ValidationMessageFor(model => model.farmZip, "", new { @class = "text-danger" })
             </div>
         </div>
-        @if (ViewBag.SavedChanges != null)
-                {
 
-            <blockquote style="color: green">@ViewBag.SavedChanges</blockquote>
-
-        }
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                                 @if (ViewBag.SavedChanges != null)
