@@ -7,37 +7,43 @@
     body,html{width:100%; height:100%;}
 
     body {
-        
+        padding-top: 90px;
         padding-bottom: 20px;
     }
+
+    body.homepage{padding-top: 0px;}
     /*----------------------- Landing Page Styles*/
     #landing_page {
         text-align: center;
     }
 
+    div.navbar-inverse .navbar-nav>li>a{color:#fff}
+
+    .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand a.navbar-brand{color:#fff}
+
         #landing_page section {
             padding: 100px 50px;
         }
 
-    header.homepage {
-        background-image: url('../Images/banner_big.png');
+    body.homepage header {
+        background-image: url('../Images/food-sunset-love-field.jpg');
         background-repeat: no-repeat;
         text-align: center;
         height: 100vh;
         margin-bottom: 100px;
     }
 
-        header.homepage .header_container {
+        body.homepage header .header_container {
             color: #fff;
-            padding: 350px 20px 0;
+            padding: 20% 20px 0;
         }
 
-        header.homepage .header_container h1{font-size:6.5rem;}
+        body.homepage header .header_container h1{font-size:6.5rem;}
 
         .header_a_cont a{
             margin-top: 20px;
             background: transparent;
-            padding: 5px 50px;
+            padding: 10px 30px;
             border-color: #fff;
             border-width: 1px;
             border-radius: 0;
@@ -45,10 +51,41 @@
             font-size:12px;
         }
 
-        .header_a_cont a:hover{
+        .header_a_cont a:hover,
+        .header_a_cont a:focus{
             background:transparent;
             border-color:#fff;
         }
+
+        .catcher .catcher_img_cont{
+            position:relative;
+            padding:0;
+        }
+
+        .catcher_img_cont span{
+            position: absolute;
+            font-size: 20px;
+            color: #fff;
+            top: 40%;
+            left: 40%;
+        }
+
+         .navbar-custom {
+            padding: 20px 0;
+            border-bottom: 0;
+            letter-spacing: 1px;
+            background: 0 0;
+            -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+        .homepage .navbar-custom.top-nav-collapse {
+            padding: 0;
+            border: 0;
+            background: #232323;
+        }
+
 
 img{
    width:100%;
@@ -71,7 +108,7 @@ img{
     border: 1px solid #73A534;
 }
 
-div.navbar-inverse {
+.homepage .navbar-inverse {
     border: 0;
     background: rgba(35, 35, 35, 0.44); /*rgba(64, 60, 22, 0.90);*/
 }
@@ -366,6 +403,16 @@ div.navbar-inverse {
         background-color: #252323;
     }
 
+    .catcher div{
+        padding:5%;
+        background:rgba(251, 250, 250, 0.49);
+        min-height:170px;
+    }
+    .catcher div p{
+        padding:20px 14px 0;
+        text-align:left;
+    }
+
 }
 
 
@@ -388,7 +435,7 @@ div.navbar-inverse {
     width: 100px;
     position: relative;
     display: block;
-    background: #e74c3c;
+    background: #EACD0C;
     color: white;
     text-align: center;
     -webkit-box-sizing: border-box;
@@ -402,7 +449,7 @@ div.navbar-inverse {
     position: absolute;
     display: block;
     bottom: -15px;
-    border: 30px solid #d62c1a;
+    border: 30px solid #C5AD09;
     z-index: -1;
     -webkit-transform: translateZ(-1px);
   }
@@ -420,7 +467,7 @@ div.navbar-inverse {
     display: block;
     border-style: solid;
     bottom: -15px;
-    border-color: #7b190f transparent transparent transparent;
+    border-color: #6F6104 transparent transparent transparent;
   }
   .big span span:before {
     left: 0;
