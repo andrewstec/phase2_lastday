@@ -35,10 +35,11 @@
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Buyer"))
                         {
-                            <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("View Cart", "MyCart", "Cart")</li>
                             <li>@Html.ActionLink("Shop", "Products", "Cart")</li>
+                            <li>@Html.ActionLink("Logout ", "Logout", "Home")</li>
+                            <li> <span class="badge username">@Html.Raw(User.Identity.Name)</span></li>
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Farm"))
                         {
@@ -46,11 +47,13 @@
                             <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
+
                         }
                         else
                         {
-                            <li>@Html.ActionLink("Login ", "Login", "Home") @Html.Raw(User.Identity.Name)</li>
+                            <li>@Html.ActionLink("Login ", "Login", "Home") </li>
                             <li>@Html.ActionLink("Register", "Register", "Home")</li>
+
                         }
                     }
                     else
@@ -70,6 +73,7 @@
 
             <div class="header_container">
                 <h1>Organic Launch</h1>
+                <h2>The Finest Quality Local Fresh Produce</h2>
                 <div class="header_a_cont">
                     <a href="@Url.Action("Login","Home")" class="btn btn-primary" style="margin-top:20px;">Login To Your Account</a>
                 </div>
@@ -84,7 +88,7 @@
                                     <h2>$15.00 OFF</h2>
                                     <p>Vancouver Wheat Flour</p>
                                     <div class="header_a_cont">
-                                        <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                        <a href="@Url.Action("Products","Cart")" class="nbtn btn-primary" style="margin-top:20px;">Shop Now</a>
                                     </div>
                                 </div>
 
