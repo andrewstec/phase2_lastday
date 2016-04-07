@@ -361,7 +361,8 @@ namespace WebApplication1.Controllers
                 string response = new MailHelper().EmailFromArvixe(new ViewModels.Message(newUser.Email, emailMessage));
 
                 ViewBag.ConfirmationResponse = response;
-                return View();
+                TempData["ConfirmationResponse"] = "You have successfully registered for an account. Please login to your account.";
+                return View("Login");
             }
             ViewBag.ErrorResponse = "There was an error with the input provided";
             return View();
