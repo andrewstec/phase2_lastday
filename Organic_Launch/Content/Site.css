@@ -4,9 +4,10 @@
 =========================*/
 @media only screen and (min-width:250px) {
 
+    body,html{width:100%; height:100%;}
 
     body {
-        padding-top: 50px;
+        
         padding-bottom: 20px;
     }
     /*----------------------- Landing Page Styles*/
@@ -19,18 +20,35 @@
         }
 
     header.homepage {
-        background-image: url('../Images/banner.png');
+        background-image: url('../Images/banner_big.png');
         background-repeat: no-repeat;
         text-align: center;
-        height: 700px;
+        height: 100vh;
         margin-bottom: 100px;
     }
 
         header.homepage .header_container {
             color: #fff;
-            padding: 240px 20px 0;
+            padding: 350px 20px 0;
         }
-        
+
+        header.homepage .header_container h1{font-size:6.5rem;}
+
+        .header_a_cont a{
+            margin-top: 20px;
+            background: transparent;
+            padding: 5px 50px;
+            border-color: #fff;
+            border-width: 1px;
+            border-radius: 0;
+            text-transform:uppercase;
+            font-size:12px;
+        }
+
+        .header_a_cont a:hover{
+            background:transparent;
+            border-color:#fff;
+        }
 
 img{
    width:100%;
@@ -55,7 +73,7 @@ img{
 
 div.navbar-inverse {
     border: 0;
-    background: rgba(64, 60, 22, 0.90);
+    background: rgba(35, 35, 35, 0.44); /*rgba(64, 60, 22, 0.90);*/
 }
 
 
@@ -342,6 +360,12 @@ div.navbar-inverse {
         max-width:100%;
         height:auto;
     }
+
+    span.username{
+        margin-top: 16px;
+        background-color: #252323;
+    }
+
 }
 
 
