@@ -338,8 +338,6 @@ div.navbar-inverse {
     TABLET
 =========================*/
 @media only screen and (min-width : 768px) {
-
-    header.homepage {margin-top: 20px;} 
     img{
         max-width:100%;
         height:auto;

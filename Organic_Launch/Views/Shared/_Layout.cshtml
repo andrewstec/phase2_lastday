@@ -73,9 +73,6 @@
             <div class="header_container">
                 <h1>Organic Launch</h1>
                 <h2>Our Company's Slogan.</h2>
-                <div class="header_a_cont">
-                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
-                </div>
             </div>
 
             @*<section id="slider-section">
@@ -125,8 +122,7 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer class="col-lg-12" style="text-align:center;">
+        <footer class="col-lg-12" style="text-align:center; margin-top:40px;">
 
             <ul style="list-style:none;">
                 <li style="display:inline;">@Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
