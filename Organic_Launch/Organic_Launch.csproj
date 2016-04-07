@@ -258,9 +258,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\107.jpg" />
-    <Content Include="Images\218.jpg" />
-    <Content Include="Images\329.jpg" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\banner_big.png" />
     <Content Include="Images\flour-powder-wheat-jar.jpg" />
     <Content Include="Images\healthy-vegetables-restaurant-nature.jpg" />
     <Content Include="Images\logo.jpg" />

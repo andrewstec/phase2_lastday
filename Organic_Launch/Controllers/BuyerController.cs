@@ -29,8 +29,8 @@ namespace Organic_Launch.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Buyer")]
-        public ActionResult MyAccount(string name)
+        [Authorize(Roles = "Buyer, Farm")]
+        public ActionResult MyAccount(string name)  
         {
             Account account = db.Accounts.Where(a => a.username == name).FirstOrDefault();
             return View(account);

@@ -19,6 +19,12 @@
                     <blockquote style="color:green;">@TempData["ConfirmationResponse"]</blockquote>
                 </div>
             }
+            @if (TempData["ConfirmationResponseError"] != null)
+            {
+                <div>
+                    <blockquote style="color:red;">@TempData["ConfirmationResponseError"]</blockquote>
+                </div>
+            }
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
                 <div class="col-md-10">
