@@ -1,7 +1,7 @@
 ﻿@model WebApplication1.ViewModels.Login
 
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = "Sign-in to your account";
 }
 
 <div class="col-sm-6">
@@ -10,7 +10,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Login</h4>
+            <h1 style="padding-bottom:5px;">Sign-in To Your Account</h1>
+            <h4>Access your farm inventory or buy local produce by signing in below. </h4>
             <hr />
             @if (TempData["ConfirmationResponse"] != null)
             {

@@ -72,9 +72,8 @@
 
             <div class="header_container">
                 <h1>Organic Launch</h1>
-                <h2>Our Company's Slogan.</h2>
                 <div class="header_a_cont">
-                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                    <a href="@Url.Action("Login","Home")" class="btn btn-primary" style="margin-top:20px;">Login To Your Account</a>
                 </div>
             </div>
 
@@ -125,16 +124,12 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
+
+        <br />
+        <div class="col-lg-8"></div>
         <footer class="col-lg-12" style="text-align:center;">
 
-            <ul style="list-style:none;">
-                <li style="display:inline;">@Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                <li style="display:inline;"><a href="#">Terms and Condition</a></li>
-                <li style="display:inline;"><a href="#">About Us</a></li>
-                <li style="display:inline;"><a href="#">Privacy</a></li>
-            </ul>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Organic Launch Foods Inc.</p>
         </footer>
     </div>
 
