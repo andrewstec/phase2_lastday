@@ -35,18 +35,16 @@
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Buyer"))
                         {
-                            <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
-                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name},null)</li>
+                            <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("View Cart", "MyCart", "Cart")</li>
                             <li>@Html.ActionLink("Shop", "Products", "Cart")</li>
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Farm"))
                         {
-                            <li>Welcome @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
                             <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
-                            <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name}, null)</li>
+                            <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
                         }
                         else
@@ -72,65 +70,65 @@
 
             <div class="header_container">
                 <h1>Organic Launch</h1>
-                <h2>Our Company's Slogan.</h2>
+                <div class="header_a_cont">
+                    <a href="@Url.Action("Login","Home")" class="btn btn-primary" style="margin-top:20px;">Login To Your Account</a>
+                </div>
             </div>
 
             @*<section id="slider-section">
-                <div class="slider">
-                    <ul>
-                        <li class="produce">
+                    <div class="slider">
+                        <ul>
+                            <li class="produce">
 
-                            <div>
-                                <h2>$15.00 OFF</h2>
-                                <p>Vancouver Wheat Flour</p>
-                                <div class="header_a_cont">
-                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                <div>
+                                    <h2>$15.00 OFF</h2>
+                                    <p>Vancouver Wheat Flour</p>
+                                    <div class="header_a_cont">
+                                        <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </li>
+                            </li>
 
-                        <li class="meat">
+                            <li class="meat">
 
-                            <div>
-                                <h2>up to 40% OFF</h2>
-                                <p>100% pure canadian beef</p>
-                                <div class="header_a_cont">
-                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                <div>
+                                    <h2>up to 40% OFF</h2>
+                                    <p>100% pure canadian beef</p>
+                                    <div class="header_a_cont">
+                                        <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </li>
+                            </li>
 
-                        <li class="products">
-                            <div>
-                                <h2>over 30% OFF</h2>
-                                <p>Oragnic and Nutritious Radishes</p>
-                                <div class="header_a_cont">
-                                    <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                            <li class="products">
+                                <div>
+                                    <h2>over 30% OFF</h2>
+                                    <p>Oragnic and Nutritious Radishes</p>
+                                    <div class="header_a_cont">
+                                        <a href="@Url.Action("Products","Cart")" class="btn btn-primary" style="margin-top:20px;">Shop Now</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>*@<!-- Slider Section End -->
+                            </li>
+                        </ul>
+                    </div>
+                </section>*@<!-- Slider Section End -->
 
         </header>
     }
 
-   
+
 
     <div class="container body-content">
         @RenderBody()
-        <footer class="col-lg-12" style="text-align:center; margin-top:40px;">
 
-            <ul style="list-style:none;">
-                <li style="display:inline;">@Html.ActionLink("Organic Launch", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</li>
-                <li style="display:inline;"><a href="#">Terms and Condition</a></li>
-                <li style="display:inline;"><a href="#">About Us</a></li>
-                <li style="display:inline;"><a href="#">Privacy</a></li>
-            </ul>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <br />
+        <div class="col-lg-8"></div>
+        <footer class="col-lg-12" style="text-align:center;">
+
+            <hr class="col-lg-12" />
+            <p>&copy; @DateTime.Now.Year - Organic Launch Foods Inc.</p>
         </footer>
     </div>
 
