@@ -261,6 +261,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner_big.png" />
+    <Content Include="Images\eggs.jpg" />
     <Content Include="Images\field.jpg" />
     <Content Include="Images\flour-powder-wheat-jar.jpg" />
     <Content Include="Images\food-sunset-love-field.jpg" />
