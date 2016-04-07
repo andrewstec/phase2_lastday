@@ -43,14 +43,14 @@ img{
 #landing_page .row a {
     width:100%;
     background: transparent;
-    color: forestgreen;
-    border: 1px solid forestgreen;
+    color: #73A534;
+    border: 1px solid #73A534;
 }
 
 #landing_page .row a:hover {
-    background-color: forestgreen;
+    background-color: #73A534;
     color: #fff;
-    border: 1px solid forestgreen;
+    border: 1px solid #73A534;
 }
 
 div.navbar-inverse {
