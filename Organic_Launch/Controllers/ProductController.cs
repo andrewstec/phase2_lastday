@@ -23,8 +23,7 @@ namespace Organic_Launch.Controllers
         {
             return View(products.GetProduct(id));
         }
-
-        //Needs styling
+        
         [HttpPost]
         public ActionResult Add(string productName, decimal priceInKG, string productCategory, string productDescription, int qtyInKG, string username)
         {
