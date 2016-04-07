@@ -556,3 +556,10 @@ C:\Users\andre\Desktop\NewClone\phase2_lastday\Organic_Launch\bin\Microsoft.Code
 C:\Users\andre\Desktop\NewClone\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.xml
 C:\Users\andre\Desktop\NewClone\phase2_lastday\Organic_Launch\bin\System.Web.Http.xml
 C:\Users\andre\Desktop\NewClone\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.xml
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.dll
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Web.Cors.dll
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.dll
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Web.Http.dll
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.xml
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Web.Http.xml
+C:\Users\A00925502\Documents\GitHub\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.xml
