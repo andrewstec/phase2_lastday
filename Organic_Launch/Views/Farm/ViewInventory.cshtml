@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Qty)
+            @Html.DisplayNameFor(model => model.QtyInKG)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FarmName)
@@ -44,7 +44,7 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Qty)
+            @Html.DisplayFor(modelItem => item.QtyInKG)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FarmName)
@@ -52,4 +52,7 @@
     </tr>
 }
 
+    <tr>
+        <td>@Html.ActionLink("Add a Product", "Add", "Product", null, null)</td>
+    </tr>
 </table>
