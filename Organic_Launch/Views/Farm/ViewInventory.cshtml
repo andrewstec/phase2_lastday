@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<WebApplication1.Models.ProductVM>
 
 @{
-    ViewBag.Title = "ViewInventory";
+    ViewBag.Title = @User.Identity.Name + " Farm Inventory";
 }
 
-<h2>Inventory</h2>
+<h2>@User.Identity.Name Farm Inventory</h2>
 
 <table class="table">
     <tr>

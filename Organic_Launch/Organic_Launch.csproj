@@ -259,7 +259,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\banner.png" />
-    <Content Include="Images\banner_big.png" />
     <Content Include="Images\flour-powder-wheat-jar.jpg" />
     <Content Include="Images\healthy-vegetables-restaurant-nature.jpg" />
     <Content Include="Images\logo.jpg" />
@@ -576,6 +575,7 @@
     <Content Include="Views\Admin\ListFarmAccounts.cshtml" />
     <Content Include="Views\Farm\Details.cshtml" />
     <Content Include="Views\Home\PayPal.cshtml" />
+    <Content Include="Views\Farm\Edit.cshtml" />
     <None Include="Views\Home\Register.cshtmlold2" />
     <Content Include="Views\Home\SecureArea.cshtml" />
     <Content Include="Views\Home\ConfirmEmail.cshtml" />
@@ -587,7 +587,7 @@
     <Content Include="Views\Product\List.cshtml" />
     <Content Include="Views\Product\Single.cshtml" />
     <Content Include="Views\Farm\Index.cshtml" />
-    <Content Include="Views\Farm\Edit.cshtml" />
+    <None Include="Views\Farm\Edit.cshtmlold" />
     <Content Include="Views\Farm\RemoveFarm.cshtml" />
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Home\AddUserToRole.cshtml" />
@@ -595,7 +595,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Farm\List.cshtml" />
     <Content Include="Views\Farm\Single.cshtml" />
-    <Content Include="Views\Product\Add.cshtml" />
+    <None Include="Views\Product\Add.cshtmlold" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Farm\Create.cshtml" />
     <Content Include="Views\Admin\ListAccounts.cshtml" />
@@ -606,6 +606,7 @@
     <Content Include="Views\Cart\MyCart.cshtml" />
     <Content Include="Views\Cart\Thankyou.cshtml" />
     <Content Include="Views\Cart\ViewCart.cshtml" />
+    <Content Include="Views\Product\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

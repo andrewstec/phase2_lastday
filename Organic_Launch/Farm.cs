@@ -11,7 +11,7 @@ namespace Organic_Launch
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
     public partial class Farm
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,11 +21,17 @@ namespace Organic_Launch
             this.FarmProducts = new HashSet<FarmProduct>();
         }
     
+        [DisplayName("Farm ID")]
         public int farmID { get; set; }
+        [DisplayName("Farm Name")]
         public string farmName { get; set; }
+        [DisplayName("Farm Profile")]
         public string farmProfile { get; set; }
+        [DisplayName("City")]
         public string farmCity { get; set; }
+        [DisplayName("Province")]
         public string farmProvince { get; set; }
+        [DisplayName("Postal Code")]
         public string farmZip { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

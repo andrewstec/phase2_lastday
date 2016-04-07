@@ -11,7 +11,8 @@ namespace Organic_Launch
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,12 +20,19 @@ namespace Organic_Launch
         {
             this.FarmProducts = new HashSet<FarmProduct>();
         }
-    
+
+        [DisplayName("Product ID")]
         public int productID { get; set; }
+        [DisplayName("Name")]
         public string productName { get; set; }
+        [DisplayName("Price in KG")]
         public Nullable<decimal> priceInKg { get; set; }
+        [DisplayName("Quantity in KG")]
+        [Range(0, Int32.MaxValue, ErrorMessage = "Please enter a number without any decimal places.")]
         public Nullable<decimal> qtyInKG { get; set; }
+        [DisplayName("Product Category")]
         public string productCategory { get; set; }
+        [DisplayName("Product Description")]
         public string productDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

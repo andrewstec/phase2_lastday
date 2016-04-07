@@ -59,11 +59,15 @@ namespace Organic_Launch.Controllers
 
         [Authorize(Roles = "Farm")]
         [HttpPost]
-        public ActionResult Edit(int farmID, string farmName, string farmProfile)
+        public ActionResult Edit(int farmID, string farmName, string farmProfile, string farmCity, string farmZip, string farmProvince)
         {
             Farm farm = db.Farms.Where(f => f.farmID == farmID).FirstOrDefault();
             farm.farmName = farmName;
             farm.farmProfile = farmProfile;
+            farm.farmCity = farmCity;
+            farm.farmProvince = farmProvince;
+            farm.farmZip = farmZip;
+            ViewBag.SavedChanges = "Your changes have been saved.";
             db.SaveChanges();
             return View(farm);
         }
