@@ -12,9 +12,20 @@
     }
 
     body.homepage{padding-top: 0px;}
+        body.login {
+            background-image: url('../Images/blur-blurred-background.jpg');
+            background-repeat: no-repeat;
+            color:#fff;
+        }
+
+        body.login footer{color:#fff;}
     /*----------------------- Landing Page Styles*/
     #landing_page {
         text-align: center;
+    }
+
+    #landing_page .container div{
+        padding:0 5px;
     }
 
     div.navbar-inverse .navbar-nav>li>a{color:#fff}
@@ -348,6 +359,29 @@ img{
         height: 350px;
         border-radius: 50%;
         width: 350px;
+    }
+
+    div.login_container{
+        max-width: 550px;
+        margin: 8em auto;
+        float: none;
+        
+        border-radius: 3px;
+        background: rgba(51, 51, 51, 0.1);
+    }
+
+    div.login_container input[type="submit"]{width:100%;}
+
+    div.login_container form{
+        text-align:center;
+        padding:40px;
+    }
+
+    div.login_container table{width:70px; margin:0 auto;}
+
+    div.login_container .col-md-10{
+        float:none;
+        margin:0 auto;
     }
   
 }

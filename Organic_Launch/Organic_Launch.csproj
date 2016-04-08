@@ -261,6 +261,7 @@
     <Content Include="Global.asax" />
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner_big.png" />
+    <Content Include="Images\blur-blurred-background.jpg" />
     <Content Include="Images\eggs.jpg" />
     <Content Include="Images\field.jpg" />
     <Content Include="Images\flour-powder-wheat-jar.jpg" />
@@ -275,6 +276,7 @@
     <Content Include="Images\organic-farm-icons_pum.png" />
     <Content Include="Images\pexels-photo-24413.jpg" />
     <Content Include="Images\roots.jpg" />
+    <Content Include="Images\wind.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -237,11 +237,13 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            ViewBag.Page = "login";
             return View();
         }
         [HttpPost]
         public ActionResult Login(Login login)
         {
+
             // UserStore and UserManager manages data retreival.
             UserStore<IdentityUser> userStore = new UserStore<IdentityUser>();
             UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
