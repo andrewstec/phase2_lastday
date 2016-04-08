@@ -15,3 +15,6 @@ function collapseNavbar() {
 
 $(window).scroll(collapseNavbar);
 $(document).ready(collapseNavbar);
+
+
+new WOW().init();
