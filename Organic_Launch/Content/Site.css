@@ -18,6 +18,11 @@
             color:#fff;
         }
 
+        body.login .navbar.navbar-custom.navbar-inverse.navbar-fixed-top{
+            background-color: rgba(34, 34, 34, 0.41);
+            border-color: transparent;
+        }
+
         body.login footer{color:#fff;}
     /*----------------------- Landing Page Styles*/
     #landing_page {
