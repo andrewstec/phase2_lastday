@@ -1,14 +1,21 @@
 ﻿
 @{
     ViewBag.Title = "Organic Launch Admin Area";
+    ViewBag.Page  = "landing";
+    var initial = User.Identity.Name[0];
 }
 
-<h2>Welcome to Organic Launch</h2>
 
-<div class="wrapper" style="margin: auto; width: 800px; padding-top:20px; text-align:center;">
 
-    <img src="~/Content/Images/farm_area.jpg" width="700" />
-    <p style="padding-top:30px;">Start your farm and offer local consumers fresh and sustainable produce.</p>
 
-</div>
+     <div class="col-sm-6">
+         <img src="~/Images/plant-ball-circle-flower.jpg" width="700" />
+     </div>
+    <div class="col-sm-6 landing_intro">
+        <span class="initial">@initial</span>
+        <h3>Welcome, @Html.Raw(User.Identity.Name)</h3>
+        <p>Start your farm and offer local consumers fresh and sustainable produce.</p>
+    </div>
+    
+
 

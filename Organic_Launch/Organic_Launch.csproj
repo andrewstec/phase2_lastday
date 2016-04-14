@@ -271,11 +271,14 @@
     <Content Include="Images\healthy-vegetables-restaurant-nature.jpg" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\nature-field-agriculture-cereals.png" />
+    <Content Include="Images\nature-flowers-pattern-circle.jpg" />
     <Content Include="Images\organic-farm-icons.png" />
     <Content Include="Images\organic-farm-icons_eggs.png" />
     <Content Include="Images\organic-farm-icons_prod.png" />
     <Content Include="Images\organic-farm-icons_pum.png" />
     <Content Include="Images\pexels-photo-24413.jpg" />
+    <Content Include="Images\pexels-photo-68558.jpeg" />
+    <Content Include="Images\plant-ball-circle-flower.jpg" />
     <Content Include="Images\roots.jpg" />
     <Content Include="Images\wind.png" />
     <Content Include="Model1.Context.tt">

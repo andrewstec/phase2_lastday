@@ -638,3 +638,10 @@ C:\Users\A00925502\Source\Repos\phase2_lastday\Organic_Launch\bin\Recaptcha.pdb
 C:\Users\A00925502\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.xml
 C:\Users\A00925502\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.xml
 C:\Users\A00925502\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.xml
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.dll
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Cors.dll
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.dll
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.dll
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Net.Http.Formatting.xml
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.xml
+C:\Users\A00594521\Source\Repos\phase2_lastday\Organic_Launch\bin\System.Web.Http.Cors.xml

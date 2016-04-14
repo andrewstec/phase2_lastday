@@ -33,6 +33,33 @@
         padding:0 5px;
     }
 
+    body.landing .body-content {
+        padding:0;
+        width:100%;
+    }
+
+    body.landing .col-sm-6{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .landing_intro {
+        text-align:center;
+        padding: 13% 15px;
+    }
+
+    .initial{
+        padding: 35px 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        text-transform: uppercase;
+        border: 1px solid #ccc;
+    }
+
+    .initial + h3{
+        margin-top:40px;
+    }
+
     div.navbar-inverse .navbar-nav>li>a{color:#fff}
 
     .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand a.navbar-brand{color:#fff}
