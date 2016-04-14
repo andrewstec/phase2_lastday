@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title Organic Launch - Quality Produce Directly From The Farm</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/toggle-farm-stylesheet.css" rel="stylesheet" />
@@ -50,10 +50,11 @@
                         }
                         else if (Request.IsAuthenticated && @HttpContext.Current.Session["UserType"].ToString().Equals("Farm"))
                         {
-                            <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") @Html.Raw(User.Identity.Name)</li>
+                            <li>@Html.ActionLink("Logout " + User.Identity.Name, "Logout", "Home") </li>
                             <li>@Html.ActionLink("My Account", "MyAccount", "Buyer", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Farm Profile", "Edit", "Farm", new { name = User.Identity.Name }, null)</li>
                             <li>@Html.ActionLink("Inventory", "ViewInventory", "Farm", new { name = User.Identity.Name }, null)</li>
+                            <li><span class="badge username">@Html.Raw(User.Identity.Name)</span></li>
 
                         }
                         else
