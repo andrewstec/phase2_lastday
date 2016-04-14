@@ -585,6 +585,8 @@
     <Content Include="Views\Admin\ListFarmAccounts.cshtml" />
     <Content Include="Views\Farm\Details.cshtml" />
     <Content Include="Views\Home\PayPal.cshtml" />
+    <Content Include="Views\Cart\AddProduct.cshtml" />
+    <Content Include="Views\Cart\Products.cshtml" />
     <None Include="Views\Home\Register.cshtmlold2" />
     <Content Include="Views\Home\SecureArea.cshtml" />
     <Content Include="Views\Home\ConfirmEmail.cshtml" />
