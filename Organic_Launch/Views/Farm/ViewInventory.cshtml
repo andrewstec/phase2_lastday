@@ -4,18 +4,18 @@
     ViewBag.Title = @User.Identity.Name + " Farm Inventory";
 }
 
-<h2>@User.Identity.Name Farm Inventory</h2>
+<h2>Farm Inventory</h2>
 
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProductName)
+            Product Name
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProductCategory)
+            Product Category
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Description)
