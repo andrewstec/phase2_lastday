@@ -263,6 +263,8 @@
     <Content Include="Images\banner.png" />
     <Content Include="Images\banner_big.png" />
     <Content Include="Images\blur-blurred-background.jpg" />
+    <Content Include="Images\cattle.jpg" />
+    <Content Include="Images\chicken.jpg" />
     <Content Include="Images\eggs.jpg" />
     <Content Include="Images\field.jpg" />
     <Content Include="Images\flour-powder-wheat-jar.jpg" />
@@ -280,6 +282,7 @@
     <Content Include="Images\pexels-photo-68558.jpeg" />
     <Content Include="Images\plant-ball-circle-flower.jpg" />
     <Content Include="Images\roots.jpg" />
+    <Content Include="Images\veggies.jpg" />
     <Content Include="Images\wind.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -588,6 +591,9 @@
     <Content Include="Views\Admin\ListFarmAccounts.cshtml" />
     <Content Include="Views\Farm\Details.cshtml" />
     <Content Include="Views\Home\PayPal.cshtml" />
+    <Content Include="Views\Cart\AddProduct.cshtml" />
+    <Content Include="Views\Cart\Products.cshtml" />
+    <Content Include="Views\Farm\ViewInventory.cshtml" />
     <None Include="Views\Home\Register.cshtmlold2" />
     <Content Include="Views\Home\SecureArea.cshtml" />
     <Content Include="Views\Home\ConfirmEmail.cshtml" />
